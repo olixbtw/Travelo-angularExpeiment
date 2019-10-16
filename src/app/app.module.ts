@@ -12,6 +12,8 @@ import { PopularDestinationsComponent } from './popular-destinations/popular-des
 import { DestinationComponent } from './destination/destination.component';
 import { SpecialOffersComponent } from './special-offers/special-offers.component';
 import { FlightAdviceComponent } from './flight-advice/flight-advice.component';
+import { TripsComponent } from './trips/trips.component';
+import { TripHelperComponent } from './tripHelper/tripHelper.component';
 
 @NgModule({
    declarations: [
@@ -24,7 +26,9 @@ import { FlightAdviceComponent } from './flight-advice/flight-advice.component';
       PopularDestinationsComponent,
       DestinationComponent,
       SpecialOffersComponent,
-      FlightAdviceComponent
+      FlightAdviceComponent,
+      TripsComponent,
+      TripHelperComponent
    ],
    imports: [
       BrowserModule,

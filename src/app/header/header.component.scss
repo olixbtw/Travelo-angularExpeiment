@@ -1,0 +1,42 @@
+$color: red;
+
+header {
+  position: absolute;
+  background: rgba($color, 0.3);
+  width: 100%;
+  padding: 10px 0;
+}
+
+.header_content {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+}
+
+.logo {
+  height: 100%;
+  img {
+    max-height: 100%;
+  }
+  span {
+  }
+}
+
+.nav_main {
+  ul {
+    display: flex;
+    li {
+      a {
+        padding: 5px 10px;
+        margin: 0 2px;
+      }
+    }
+  }
+}
+
+.user_cabinet {
+  img {
+    border-radius: 50%;
+  }
+}
