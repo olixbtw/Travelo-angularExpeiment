@@ -1,0 +1,27 @@
+body {
+  background-color: #fff;
+  line-height: 1.4;
+  font-family: Arial, -apple-system, BlinkMacSystemFont, 'Oxygen', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: $text;
+  min-width: 320px;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+  &--lg {
+    max-width: 1900px;
+  }
+}

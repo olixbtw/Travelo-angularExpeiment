@@ -1,0 +1,22 @@
+.btn {
+  display: inline-block;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  background-color: $blue;
+  padding: 15px 25px;
+  font-size: 14px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 3px;
+  border-radius: 2px;
+  text-align: center;
+  position: relative;
+  outline: none;
+  transition: background-color .3s ease;
+  cursor: pointer;
+  &:hover {
+    background-color: lighten($blue, 5%)
+  }
+}
