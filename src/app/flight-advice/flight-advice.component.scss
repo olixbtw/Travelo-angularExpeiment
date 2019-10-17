@@ -1,0 +1,28 @@
+.flight-advice-container {
+    background-image: url(/assets/images/cycling-in-the-mountains.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+.flight-advice-info-block {
+    background-color: rgba(255,255,255,0.4);
+    width: 50vw;
+    height: 15vh;
+
+}
+
+.flight-advice-text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 1rem;
+
+    span {
+        text-decoration: underline;
+    }
+}
