@@ -1,1 +1,15 @@
-<p>destination works!</p>
+<section>
+  <div class="container">
+    <h2 class="container__title">Popular destinations</h2>
+    <ul class="destinations">
+      <li
+        *ngFor='let item of destinations'
+        class="destinations__item">
+        <a href="#" class="destination" [style.backgroundImage]="'url('+ item.img +')'">
+          <h3 class="destination__title">{{item.title}}</h3>
+          <p class="destination__description">{{item.description}}</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
