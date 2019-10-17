@@ -18,5 +18,9 @@
   cursor: pointer;
   &:hover {
     background-color: lighten($blue, 5%)
+  };
+  &--white {
+    background-color: #fff;
+    color: $blue;
   }
 }
