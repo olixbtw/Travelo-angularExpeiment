@@ -1,0 +1,41 @@
+@import "../import";
+
+footer {
+  padding: 30px 0;
+  color: $white;
+}
+
+:host {
+  background: $blue;
+}
+
+.footer-list {
+  font-size: 1.6rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  li {
+    padding: 5px 10px;
+    margin: 0 5px 5px;
+    a{
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+
+  app-logo {
+    margin-right: 10px;
+  }
+}

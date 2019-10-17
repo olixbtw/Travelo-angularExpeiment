@@ -6,6 +6,8 @@ body {
   font-size: 16px;
   color: $text;
   min-width: 320px;
+  background: $light;
+  overflow-y: scroll;
 }
 
 a {
@@ -24,10 +26,4 @@ a {
   &--lg {
     max-width: 1900px;
   }
-}
-
-.wrapper{
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }

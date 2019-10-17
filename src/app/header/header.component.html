@@ -1,26 +1,23 @@
-<header>
-  <div class="container">
-    <div class="header_content">
+<div class="container container--lg">
+  <header>
 
-      <div class="logo">
-        <a [routerLink]="['/']" routerLinkActive="router-link-active">
-          <img src="assets/logo.svg" alt="Travelo logo">
-          <span>Travelo</span>
-        </a>
-      </div>
+    <app-logo></app-logo>
 
-      <nav class="nav_main">
-        <ul>
-          <li><a [routerLink]="['/flights']" routerLinkActive="router-link-active">Fligths</a></li>
-          <li><a [routerLink]="['/trips']" routerLinkActive="router-link-active">My trips</a></li>
-          <li><a [routerLink]="['/helper']" routerLinkActive="router-link-active">Trip helper</a></li>
-        </ul>
-      </nav>
+    <nav class="nav_main">
+      <ul>
+        <li><a [routerLink]="['/flights']" routerLinkActive="router-link-active">Fligths</a></li>
+        <li><a [routerLink]="['/trips']" routerLinkActive="router-link-active">My trips</a></li>
+        <li><a [routerLink]="['/helper']" routerLinkActive="router-link-active">Trip helper</a></li>
+      </ul>
+    </nav>
 
-      <div class="user_cabinet">
-        <img src="assets/ui/user-blank.svg" alt="profile photo">
-      </div>
-
+    <div class="user_cabinet">
+      <a href="">
+        <div class="user_image">
+          AV
+        </div>
+      </a>
     </div>
-  </div>
-</header>
+
+  </header>
+</div>

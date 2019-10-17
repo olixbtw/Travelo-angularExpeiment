@@ -1,42 +1,93 @@
-$color: red;
+@import "../import";
 
-header {
-  position: absolute;
-  background: rgba($color, 0.3);
+:host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba($white, 0.3);
   width: 100%;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
-.header_content {
+header {
   display: flex;
   justify-content: space-between;
-  height: 50px;
+  min-height: 50px;
   align-items: center;
 }
 
-.logo {
-  height: 100%;
-  img {
-    max-height: 100%;
-  }
-  span {
-  }
-}
-
 .nav_main {
+  color: $blue;
+  font-size: 1.2rem;
+  font-weight: bold;
+
   ul {
+    @media (max-width: $screen-md) {
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+    }
     display: flex;
+    justify-content: center;
     li {
       a {
         padding: 5px 10px;
         margin: 0 2px;
+        &.router-link-active {
+          &:hover {
+            &::after {
+              opacity: 1;
+            }
+          }
+          &::after {
+            opacity: 1;
+            margin-left: 5%;
+            width: 90%;
+          }
+        }
+
+        position: relative;
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 0;
+          height: 3px;
+          background: $orange;
+          opacity: 0.4;
+
+          margin-left: 50%;
+          width: 0px;
+          transition: all 0.1s ease-in-out;
+        }
+        &:hover {
+          &::after {
+            opacity: 0.8;
+            margin-left: 10%;
+            width: 80%;
+          }
+        }
       }
     }
   }
 }
 
 .user_cabinet {
-  img {
+  .user_image {
+    background: $blue;
+    color: $white;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    font-size: 1.3rem;
+    text-align: center;
     border-radius: 50%;
+
+    transition: opacity 0.2s ease-in-out;
+    &:hover {
+      opacity: 0.9;
+    }
   }
 }

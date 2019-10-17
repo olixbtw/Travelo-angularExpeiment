@@ -1,0 +1,27 @@
+@import "../../import";
+
+$max-logo-height: 100%;
+
+:host {
+  height: 50px;
+  max-height: $max-logo-height;
+  a {
+    max-height: $max-logo-height;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: opacity .2s ease-in-out;
+    &:hover{
+      opacity: .9;
+    }
+  }
+  img {
+    max-height: $max-logo-height;
+  }
+  span {
+    margin-left: .2em;
+    font-size: 1.2rem;
+    color: $orange;
+    font-weight: 600;
+  }
+}

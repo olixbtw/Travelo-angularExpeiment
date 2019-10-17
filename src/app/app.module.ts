@@ -14,6 +14,7 @@ import { SpecialOffersComponent } from './special-offers/special-offers.componen
 import { FlightAdviceComponent } from './flight-advice/flight-advice.component';
 import { TripsComponent } from './trips/trips.component';
 import { TripHelperComponent } from './tripHelper/tripHelper.component';
+import { AppLogoComponent } from './components/app-logo/app-logo.component';
 
 @NgModule({
    declarations: [
@@ -28,7 +29,8 @@ import { TripHelperComponent } from './tripHelper/tripHelper.component';
       SpecialOffersComponent,
       FlightAdviceComponent,
       TripsComponent,
-      TripHelperComponent
+      TripHelperComponent,
+      AppLogoComponent
    ],
    imports: [
       BrowserModule,
