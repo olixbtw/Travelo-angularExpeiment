@@ -1,3 +1,5 @@
+@import "./../_import.scss";
+
 .flight-advice-container {
     background-image: url(/assets/images/cycling-in-the-mountains.jpg);
     background-repeat: no-repeat;
@@ -12,7 +14,7 @@
 .flight-advice-info-block {
     background-color: rgba(255,255,255,0.4);
     width: 50vw;
-    height: 15vh;
+    min-height: 15vh;
 
 }
 
@@ -25,4 +27,11 @@
     span {
         text-decoration: underline;
     }
+}
+
+.flight-advice-btn {
+    margin: 0.5rem;
+}
+p {
+    text-align: left;
 }
