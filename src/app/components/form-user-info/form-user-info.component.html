@@ -1,1 +1,77 @@
-<p>form-user-info works!</p>
+<div class="ticket-details-container">
+    <h3>Ticket details & Booking</h3>
+    <div>here will be a ticket to</div> 
+    <div>here will be a ticket from</div>
+</div>
+
+<div class="passenger-form-container">
+
+    <form action="#" method="post" class="passenger-form">
+
+        <h3>Passenger 1</h3>
+        
+        <div class="form-inputs-container">
+            <div class="form-row">
+                <div>
+                    <label> Name <br> <input type="text" placeholder="Type something"><br></label>
+                </div>
+                <div>
+                    <label>Last Name: <br> <input type="text" placeholder="Type something"></label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                
+                <div>
+                    <label> Country <br> <input list="countries" name="country" placeholder="Type something">
+                        <datalist id="countries">
+                            <option value="Uganda">
+                            <option value="Ukraine">
+                            <option value="United Arab Emirates">
+                        </datalist>    
+                    <br></label>
+                </div>
+
+                <div>
+                    <label> Gender <br> <input list="gender" name="sex" placeholder="f/e">
+                        <datalist id="gender">
+                            <option value="f">
+                            <option value="m">
+                        </datalist>    
+                    <br></label>
+                </div>
+                <div>
+                    <label>Date of Birth <br> <input type="date" name="bday"><br></label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div>
+                    <label> Passport ID <br> <input type="text" placeholder="Type something"><br></label>
+                </div>
+                <div>
+                    <label>Passport or ID expiry date <br> <input type="date" name="expirydate"></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="luggage-block">
+            <h3>Luggage</h3>
+            <p>Choose the luggage to want to travel with</p>
+            <p>
+                <input type="checkbox">
+                <span>Bag up to 24k.($20 additional cost)</span></p>
+        </div>
+        
+        <div class="form-footer-container">
+            <h3>Total:</h3>
+            <div>
+                <div>$176</div>
+                <button class="btn">Book</button>
+            </div>
+        </div>
+    
+    </form>
+
+</div>
+
