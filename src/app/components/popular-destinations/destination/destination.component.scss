@@ -3,18 +3,18 @@
 $color-white: #fff;
 
 .destination {
+  @include cover;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   height: 100%;
   border-radius: 5px;
   overflow: hidden;
-  @include cover;
-  box-shadow: 0px 12px 15px 0px #bdbdbd;
+  box-shadow: 1px 5px 10px 0px rgba(#bdbdbd, .8);
   transition: transform 0.3s, box-shadow 0.3s;
   &:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 22px 15px 3px #bdbdbd;
+    box-shadow: 3px 15px 15px 3px #bdbdbd;
     .destination__title {
       min-width: 100%;
     }

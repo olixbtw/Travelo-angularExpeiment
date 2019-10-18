@@ -4,9 +4,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from '@app/app-routing.module';
 import { AppComponent } from '@app/app.component';
+
 import { HomePageComponent } from '@app/routes/home-page/home-page.component';
 import { FlightsComponent } from '@app/routes/flights/flights.component';
+import { TripsComponent } from '@app/routes/trips/trips.component';
 import { ErrorPathComponent } from '@app/routes/errorPath/errorPath.component';
+
 import { HeaderComponent } from '@app/routes/home-page/header/header.component';
 import { FooterComponent } from '@app/routes/home-page/footer/footer.component';
 import { FlightSearchComponent } from '@app/components/flight-search-main/flight-search.component';
@@ -29,11 +32,10 @@ import { FormUserInfoComponent } from '@app/components/form-user-info/form-user-
     DestinationComponent,
     SpecialOffersComponent,
     FlightAdviceComponent,
-    // TripsComponent,
-    // TripHelperComponent,
     AppLogoComponent,
     ErrorPathComponent,
     FormUserInfoComponent,
+    TripsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],

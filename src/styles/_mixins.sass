@@ -1,47 +1,48 @@
+@import 'vars'
 // screen sizes
 //-----------------------------
 // max width
-  // стили применяются наэкранах МЕНЬШЕ чем значение
+// стили применяются наэкранах МЕНЬШЕ чем значение
 =xlg
-  +r($screen-xlg)
+	+r($screen-xlg)
 		@content
 
 =lg
-  +r($screen-lg)
+	+r($screen-lg)
 		@content
 
 =md
-  +r($screen-md)
+	+r($screen-md)
 		@content
 
 =sm
-  +r($screen-sm)
+	+r($screen-sm)
 		@content
 
 =xs
-  +r($screen-xsm)
+	+r($screen-xsm)
 		@content
 
 // min width
-  // стили применяются наэкранах БОЛЬШЕ чем значение
-=xlg
-  +rmin($screen-xlg)
+	// стили применяются наэкранах БОЛЬШЕ чем значение
+=m-xlg
+	+rmin($screen-xlg)
 		@content
 
-=lg
-  +rmin($screen-lg)
+=m-lg
+	+rmin($screen-lg)
 		@content
 
-=md
-  +rmin($screen-md)
+=m-md
+	+rmin($screen-md)
 		@content
 
-=sm
-  +rmin($screen-sm)
+=m-sm
+	+rmin($screen-sm)
 		@content
 
-=xs
-  +rmin($screen-xsm)
+=m-xs
+	+rmin($screen-xsm)
 		@content
 
 // width
@@ -108,7 +109,11 @@
   hyphens: auto
 
 =sel
+<<<<<<< HEAD
   &::selection
+=======
+	&::selection
+>>>>>>> REFACTOR
 			@content
 
 =rotate($var)
@@ -121,11 +126,19 @@
   transform: scale($var)
 
 =counter($var, $sep)
+<<<<<<< HEAD
   counter-reset: list + $var
   > li
     &:before
       content: counter(list + $var) $sep
       counter-increment: list + $var
+=======
+	counter-reset: list + $var
+	> li
+		&:before
+			content: counter(list + $var) $sep
+			counter-increment: list + $var
+>>>>>>> REFACTOR
 
 =flex-size($val)
   flex: 0 0 $val
