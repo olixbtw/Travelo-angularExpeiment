@@ -1,6 +1,6 @@
 @import 'vars';
 @import 'mixins';
-$white: #fff;
+$color-white: #fff;
 
 .destination {
   display: flex;
@@ -21,10 +21,10 @@ $white: #fff;
   }
   &__title {
     align-self: flex-start;
-    color: $white;
+    color: $color-white;
     font-size: 20px;
     min-width: 140px;
-    background-color: $orange;
+    background-color: $color-orange;
     border-radius: 2px;
     margin-bottom: -10px;
     padding: 5px 25px;
@@ -33,7 +33,7 @@ $white: #fff;
     transition: min-width 0.5s;
   }
   &__description {
-    background-color: rgba($white, 0.9);
+    background-color: rgba($color-white, 0.9);
     padding: 20px 25px;
   }
 }

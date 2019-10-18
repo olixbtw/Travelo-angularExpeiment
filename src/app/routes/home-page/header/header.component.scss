@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba($white, 0.3);
+  background: rgba($color-white, 0.3);
   width: 100%;
   padding: 20px 0;
   z-index: $zi-top;
@@ -18,7 +18,7 @@ header {
 }
 
 .nav_main {
-  color: $blue;
+  color: $color-blue;
   font-size: 1.2rem;
   font-weight: bold;
 
@@ -56,7 +56,7 @@ header {
           position: absolute;
           bottom: 0;
           height: 3px;
-          background: $orange;
+          background: $color-orange;
           opacity: 0.4;
 
           margin-left: 50%;
@@ -77,8 +77,8 @@ header {
 
 .user_cabinet {
   .user_image {
-    background: $blue;
-    color: $white;
+    background: $color-blue;
+    color: $color-white;
     height: 50px;
     width: 50px;
     line-height: 50px;

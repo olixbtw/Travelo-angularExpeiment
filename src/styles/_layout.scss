@@ -4,9 +4,9 @@ body {
   font-family: Arial, -apple-system, BlinkMacSystemFont, 'Oxygen', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  color: $text;
+  color: $color-text;
   min-width: 320px;
-  background: $light;
+  background: $color-light;
   overflow-y: scroll;
   // overflow-x: hidden;
 }

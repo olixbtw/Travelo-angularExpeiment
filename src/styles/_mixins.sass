@@ -1,32 +1,59 @@
+@import 'vars'
+// screen sizes
+//-----------------------------
+// max width
+// стили применяются наэкранах МЕНЬШЕ чем значение
+=xlg
+	+r($screen-xlg)
+		@content
 
 =lg
-	+r(1259)
+	+r($screen-lg)
 		@content
 
 =md
-	+r(1023)
+	+r($screen-md)
 		@content
 
 =sm
-	+r(767)
+	+r($screen-sm)
 		@content
 
 =xs
-	+r(479)
+	+r($screen-xsm)
 		@content
 
-// =ms
-// 	+r(429)
-// 		@content
+// min width
+	// стили применяются наэкранах БОЛЬШЕ чем значение
+=m-xlg
+	+rmin($screen-xlg)
+		@content
+
+=m-lg
+	+rmin($screen-lg)
+		@content
+
+=m-md
+	+rmin($screen-md)
+		@content
+
+=m-sm
+	+rmin($screen-sm)
+		@content
+
+=m-xs
+	+rmin($screen-xsm)
+		@content
 
 // width
 =r($width)
-	@media only screen and (max-width: $width+ "px")
+	@media only screen and (max-width: $width)
 		@content
 
 =rmin($width)
-	@media only screen and (min-width: $width+ "px")
+	@media only screen and (min-width: $width)
 		@content
+//-----------------------------
 
 =text-overflow
 	overflow: hidden
@@ -82,9 +109,8 @@
 	hyphens: auto
 
 =sel
-	& ::selection
+	&::selection
 			@content
-
 
 =rotate($var)
 	transform: rotate($var+deg)
@@ -101,7 +127,6 @@
 		&:before
 			content: counter(list + $var) $sep
 			counter-increment: list + $var
-
 
 =flex-size($val)
 	flex: 0 0 $val
