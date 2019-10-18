@@ -1,5 +1,7 @@
-@import "./../_import.scss";
-@import "../../styles/_mixins.sass";
+@import "vars";
+@import "mixins";
+// @import "./../_import.scss";
+// @import "../../styles/_mixins.sass";
 
 .flight-advice-container {
     margin-top: 100px;
