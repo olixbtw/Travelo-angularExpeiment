@@ -5,7 +5,7 @@
       <li
         *ngFor='let item of destinations'
         class="destinations__item">
-        <a href="#" class="destination" [style.backgroundImage]="'url('+ item.img +')'">
+        <a [routerLink]="['/err']" class="destination" [style.backgroundImage]="'url('+ item.img +')'">
           <h3 class="destination__title">{{item.title}}</h3>
           <p class="destination__description">{{item.description}}</p>
         </a>

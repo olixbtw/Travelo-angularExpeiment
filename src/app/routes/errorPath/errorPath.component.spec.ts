@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { TripsComponent } from './trips.component';
+import { ErrorPathComponent } from './errorPath.component';
 
-describe('TripsComponent', () => {
-  let component: TripsComponent;
-  let fixture: ComponentFixture<TripsComponent>;
+describe('ErrorPathComponent', () => {
+  let component: ErrorPathComponent;
+  let fixture: ComponentFixture<ErrorPathComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TripsComponent ]
+      declarations: [ ErrorPathComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TripsComponent);
+    fixture = TestBed.createComponent(ErrorPathComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
