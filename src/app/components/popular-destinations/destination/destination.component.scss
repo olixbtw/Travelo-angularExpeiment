@@ -1,5 +1,5 @@
-@import 'vars';
-@import 'mixins';
+@import "vars";
+@import "mixins";
 $color-white: #fff;
 
 .destination {
@@ -10,7 +10,7 @@ $color-white: #fff;
   height: 100%;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 1px 5px 10px 0px rgba(#bdbdbd, .8);
+  box-shadow: 1px 5px 10px 0px rgba(#bdbdbd, 0.8);
   transition: transform 0.3s, box-shadow 0.3s;
   &:hover {
     transform: translateY(-10px);
