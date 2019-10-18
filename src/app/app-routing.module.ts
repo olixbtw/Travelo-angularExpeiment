@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomePageComponent } from '@app/routes/home-page/home-page.component';
 import { FlightsComponent } from '@app/routes/flights/flights.component';
+import { TripsComponent } from '@app/routes/trips/trips.component';
 import { ErrorPathComponent } from '@app/routes/errorPath/errorPath.component';
 
 const routes: Routes = [
@@ -16,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: 'trips',
-    component: ErrorPathComponent,
+    component: TripsComponent,
   },
   {
     path: 'helper',
