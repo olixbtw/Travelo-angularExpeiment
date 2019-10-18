@@ -1,1 +1,13 @@
-<p>special-offers works!</p>
+<div class="special-offer">
+	<h2 class="special-offer__title">{{offersTitle}}</h2>
+	<div class="special-offer__item" *ngFor='let item of offers'>
+		<img class="special-offer__img" 
+			[attr.src]='item.img'
+			[attr.alt]='item.alt'>
+		<div class="offer">
+			<h3 class="offer__title">{{item.title}}</h3>
+			<p class="offer__description">{{item.description}}</p>
+			<button class="offer__button btn btn--white">Learn more</button>
+		</div>
+	</div>
+</div>
