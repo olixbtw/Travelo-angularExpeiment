@@ -99,8 +99,8 @@
 	counter-reset: list + $var
 	> li
 		&:before
-		content: counter(list + $var) $sep
-		counter-increment: list + $var
+			content: counter(list + $var) $sep
+			counter-increment: list + $var
 
 
 =flex-size($val)

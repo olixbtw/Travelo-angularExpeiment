@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomePageComponent } from './home-page/home-page.component';
-import { FlightsComponent } from './flights/flights.component';
-import { ErrorPathComponent } from './routes/errorPath/errorPath.component';
+import { HomePageComponent } from '@app/routes/home-page/home-page.component';
+import { FlightsComponent } from '@app/routes/flights/flights.component';
+import { ErrorPathComponent } from '@app/routes/errorPath/errorPath.component';
 
 const routes: Routes = [
   {
