@@ -20,12 +20,15 @@ a {
 }
 
 .container {
-  max-width: 1000px;
+  @include m-sm(){max-width: $screen-sm - 50px;};
+  @include m-md(){max-width: $screen-md - 100px;};
+  @include m-lg(){max-width: $screen-lg - 150px;};
+  @include m-xlg(){max-width: $screen-lg};
   width: 100%;
   margin: 0 auto;
   padding: 0 30px;
   &--lg {
-    max-width: 1900px;
+    max-width: $screen-xlg + 500px;
   }
   &__title {
     // h2
