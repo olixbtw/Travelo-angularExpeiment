@@ -1,0 +1,14 @@
+.passenger-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+}
+
+.form-footer-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+}
