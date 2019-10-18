@@ -1,27 +1,53 @@
-@import 'forms';
-@import 'reset';
-@import 'buttons';
+@import "forms";
+// @import "reset";
+@import "buttons";
 
-:host {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url('/assets/images/main.png');
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  height: 75vh;
+.form {
+  color: $blue;
+  background-color: rgba($color: $white, $alpha: 0.95);
+  box-shadow: 0 0 5px rgba($color: #000, $alpha: 0.3);
+  padding: 25px 20px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+
+  &__inline {
+    display: flex;
+    flex-direction: row;
+
+    &:not(:last-of-type) {
+      margin-bottom: 15px;
+    }
+
+    input[type="radio"] {
+      margin-left: 30px;
+      margin-right: 2px;
+    }
+  }
 }
 
-.container {
-  h1 {
-    width: 50%;
-    color: white;
-    text-shadow: 0 0 20px rgba($color: #000, $alpha: 0.3);
-    font-size: 45px;
-    margin-bottom: 25px;
+.form-icon {
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 10px;
+    z-index: 1;
   }
 
-  button {
-    padding: 10px 50px;
+  &--left {
+    img {
+      left: 20px;
+    }
+  }
+
+  &--right {
+    img {
+      right: 0;
+    }
+  }
+
+  .formcontrol {
+    padding-left: 50px;
   }
 }

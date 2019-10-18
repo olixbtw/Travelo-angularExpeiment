@@ -1,0 +1,9 @@
+.two-columns {
+  display: flex;
+  margin-top: 50px;
+  .col {
+    height: 100%;
+    &:first-child{width: 35%;}
+    &:last-child{width: 65%;}
+  }
+}

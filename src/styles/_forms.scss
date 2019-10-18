@@ -1,27 +1,4 @@
-@import 'vars';
-
-.form {
-  color: $blue;
-  background-color: rgba($color: $light, $alpha: 0.95);
-  padding: 25px 20px;
-  border-radius: 3px;
-  font-size: 14px;
-  font-weight: 600;
-
-  &__inline {
-    display: flex;
-    flex-direction: row;
-
-    &:not(:last-of-type) {
-      margin-bottom: 15px;
-    }
-
-    input[type='radio'] {
-      margin-left: 30px;
-      margin-right: 2px;
-    }
-  }
-}
+@import "vars";
 
 .formcontrol {
   height: 40px;
@@ -42,33 +19,7 @@
     border-left: none;
   }
 
-  &[type='number'] {
+  &[type="number"] {
     width: 160px;
-  }
-}
-
-.form-icon {
-  position: relative;
-
-  img {
-    position: absolute;
-    top: 10px;
-    z-index: 1;
-  }
-
-  &--left {
-    img {
-      left: 20px;
-    }
-  }
-
-  &--right {
-    img {
-      right: 0;
-    }
-  }
-
-  .formcontrol {
-    padding-left: 50px;
   }
 }

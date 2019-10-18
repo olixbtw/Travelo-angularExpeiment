@@ -1,46 +1,39 @@
-<div class="container">
-  <h1>Life is to short to quit travelling</h1>
-  <form class="form" [formGroup]="searchForm">
-    <div class="form__inline">
-      <label>
-        <input type="radio" formControlName="tripType" value="return" />
-        Return
-      </label>
-      <label>
-        <input type="radio" formControlName="tripType" value="oneWay" />
-        One way
-      </label>
-      <label>
-        <input type="radio" formControlName="tripType" value="multiTrip" />
-        Multi-trip
-      </label>
-    </div>
-    <div class="form__inline">
-      <label class="form-icon form-icon--left">
-        <img src="assets/ui/plane_to.svg" alt="departure" />
-        <input type="text" class="formcontrol formcontrol--left" placeholder="Kyiv (KBP)" formControlName="departure" />
-      </label>
-      <label class="form-icon form-icon--right">
-        <img src="assets/ui/backnforce.svg" alt="" />
-      </label>
-      <label class="form-icon form-icon--left">
-        <img src="assets/ui/plane_back.svg" alt="destination" />
-        <input
-          type="text"
-          class="formcontrol formcontrol--right"
-          placeholder="Paris (CDG)"
-          formControlName="destination"
-        />
-      </label>
-      <label class="form-icon form-icon--left">
-        <img src="assets/ui/calendar.svg" alt="dates" />
-        <input type="date" class="formcontrol" formControlName="dates" />
-      </label>
-      <label class="form-icon form-icon--left">
-        <img src="assets/ui/profile.svg" alt="passengers" />
-        <input type="number" class="formcontrol" placeholder="1 passenger" formControlName="passengers" />
-      </label>
-      <button class="btn">Search</button>
-    </div>
-  </form>
-</div>
+<form class="form" [formGroup]="searchForm">
+  <div class="form__inline">
+    <label>
+      <input type="radio" formControlName="tripType" value="return" />
+      Return
+    </label>
+    <label>
+      <input type="radio" formControlName="tripType" value="oneWay" />
+      One way
+    </label>
+    <label>
+      <input type="radio" formControlName="tripType" value="multiTrip" />
+      Multi-trip
+    </label>
+  </div>
+  <div class="form__inline">
+    <label class="form-icon form-icon--left">
+      <img src="assets/ui/plane_to.svg" alt="departure" />
+      <input type="text" class="formcontrol formcontrol--left" placeholder="Kyiv (KBP)" formControlName="departure" />
+    </label>
+    <label class="form-icon form-icon--right">
+      <img src="assets/ui/backnforce.svg" alt="" />
+    </label>
+    <label class="form-icon form-icon--left">
+      <img src="assets/ui/plane_back.svg" alt="destination" />
+      <input type="text" class="formcontrol formcontrol--right" placeholder="Paris (CDG)"
+        formControlName="destination" />
+    </label>
+    <label class="form-icon form-icon--left">
+      <img src="assets/ui/calendar.svg" alt="dates" />
+      <input type="date" class="formcontrol" formControlName="dates" />
+    </label>
+    <label class="form-icon form-icon--left">
+      <img src="assets/ui/profile.svg" alt="passengers" />
+      <input type="number" class="formcontrol" placeholder="1 passenger" formControlName="passengers" />
+    </label>
+    <button class="btn">Search</button>
+  </div>
+</form>
