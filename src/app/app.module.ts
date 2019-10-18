@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,28 +18,23 @@ import { TripHelperComponent } from './tripHelper/tripHelper.component';
 import { AppLogoComponent } from './components/app-logo/app-logo.component';
 
 @NgModule({
-   declarations: [
-      AppComponent,
-      FlightsComponent,
-      HeaderComponent,
-      FooterComponent,
-      HomePageComponent,
-      FlightSearchComponent,
-      PopularDestinationsComponent,
-      DestinationComponent,
-      SpecialOffersComponent,
-      FlightAdviceComponent,
-      TripsComponent,
-      TripHelperComponent,
-      AppLogoComponent
-   ],
-   imports: [
-      BrowserModule,
-      AppRoutingModule
-   ],
-   providers: [],
-   bootstrap: [
-      AppComponent
-   ]
+  declarations: [
+    AppComponent,
+    FlightsComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomePageComponent,
+    FlightSearchComponent,
+    PopularDestinationsComponent,
+    DestinationComponent,
+    SpecialOffersComponent,
+    FlightAdviceComponent,
+    TripsComponent,
+    TripHelperComponent,
+    AppLogoComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

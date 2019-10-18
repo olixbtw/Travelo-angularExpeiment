@@ -1,0 +1,21 @@
+@import '../import';
+
+section {
+  padding-top: 100px;
+}
+
+.destinations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+  // grid-template-rows: repeat(2, 200px);
+  grid-gap: 40px;
+  padding-top: 40px;
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include sm {
+    grid-template-columns: minmax(min-content, 500px);
+    justify-content: center;
+  }
+}
