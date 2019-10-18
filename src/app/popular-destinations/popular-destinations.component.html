@@ -1,2 +1,10 @@
-<p>popular-destinations works!</p>
-<app-destination></app-destination>
+<section>
+  <div class="container">
+    <h2 class="container__title">Popular destinations</h2>
+    <ul class="destinations">
+      <li *ngFor="let item of destinations" class="destinations__item">
+        <app-destination [data]="item"></app-destination>
+      </li>
+    </ul>
+  </div>
+</section>
