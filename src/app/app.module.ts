@@ -12,9 +12,12 @@ import { PopularDestinationsComponent } from './popular-destinations/popular-des
 import { DestinationComponent } from './destination/destination.component';
 import { SpecialOffersComponent } from './special-offers/special-offers.component';
 import { FlightAdviceComponent } from './flight-advice/flight-advice.component';
-import { TripsComponent } from './trips/trips.component';
-import { TripHelperComponent } from './tripHelper/tripHelper.component';
-import { AppLogoComponent } from './components/app-logo/app-logo.component';
+// import { AppLogoComponent } from './components/app-logo/app-logo.component';
+// import { AppLogoComponent } from './../../../components/app-logo/app-logo.component';
+import { AppLogoComponent } from '@app/components/app-logo/app-logo.component';
+import { ErrorPathComponent } from './routes/errorPath/errorPath.component';
+// import { TripsComponent } from './trips/trips.component';
+// import { TripHelperComponent } from './tripHelper/tripHelper.component';
 
 @NgModule({
    declarations: [
@@ -28,9 +31,10 @@ import { AppLogoComponent } from './components/app-logo/app-logo.component';
       DestinationComponent,
       SpecialOffersComponent,
       FlightAdviceComponent,
-      TripsComponent,
-      TripHelperComponent,
-      AppLogoComponent
+      // TripsComponent,
+      // TripHelperComponent,
+      AppLogoComponent,
+      ErrorPathComponent
    ],
    imports: [
       BrowserModule,
