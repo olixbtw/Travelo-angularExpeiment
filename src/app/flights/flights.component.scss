@@ -1,6 +1,7 @@
 .two-columns {
   display: flex;
-  margin-top: 50px;
+  margin: 50px 0;
+
   .col {
     height: 100%;
     &:first-child{width: 35%;}
