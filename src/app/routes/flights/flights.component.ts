@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import flights from './fligths.data.js';
+import flights from '@data/mock/fligths-component.mock.js';
 
 @Component({
   selector: 'app-flights',
