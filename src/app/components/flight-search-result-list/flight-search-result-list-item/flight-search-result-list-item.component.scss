@@ -1,0 +1,27 @@
+@import "vars";
+
+:host {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.card {
+  border-radius: 20px;
+  background: $color-white;
+  padding: 20px;
+  box-shadow: 2px 5px 10px rgba($color-text, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .flights {
+    &__item {
+      padding: 10px;
+    }
+  }
+
+  .book_result {
+    border-left: 1px solid $color-blue;
+    padding: 20px;
+  }
+}

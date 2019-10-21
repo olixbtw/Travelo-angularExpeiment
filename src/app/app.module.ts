@@ -19,6 +19,9 @@ import { SpecialOffersComponent } from '@components/special-offers/special-offer
 import { FlightAdviceComponent } from '@components/flight-advice/flight-advice.component';
 import { AppLogoComponent } from '@components/app-logo/app-logo.component';
 import { FormUserInfoComponent } from '@components/form-user-info/form-user-info.component';
+import { FlightSearchResultListComponent } from '@components/flight-search-result-list/flight-search-result-list.component';
+// tslint:disable-next-line: max-line-length
+import { FlightSearchResultListItemComponent } from '@components/flight-search-result-list/flight-search-result-list-item/flight-search-result-list-item.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,8 @@ import { FormUserInfoComponent } from '@components/form-user-info/form-user-info
     ErrorPathComponent,
     FormUserInfoComponent,
     TripsComponent,
+    FlightSearchResultListComponent,
+    FlightSearchResultListItemComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],

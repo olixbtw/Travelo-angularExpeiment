@@ -1,0 +1,14 @@
+<div class="card">
+
+  <div class="flights">
+
+    <div class="flights__item" *ngFor="let flight of tripFlights; index as i">
+      Flight {{i+1}}: {{flight.departure}} - {{flight.arrival}}
+    </div>
+  </div>
+
+  <div class="book_result">
+    <button class="btn">Book</button>
+  </div>
+
+</div>
