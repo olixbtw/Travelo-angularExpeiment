@@ -13,12 +13,12 @@ import { ErrorPathComponent } from '@routes/errorPath/errorPath.component';
 import { HeaderComponent } from '@routes/home-page/header/header.component';
 import { FooterComponent } from '@routes/home-page/footer/footer.component';
 import { FlightSearchComponent } from '@components/flight-search-main/flight-search.component';
-import { PopularDestinationsComponent } from '@components/popular-destinations/popular-destinations.component';
-import { DestinationComponent } from '@components/popular-destinations/destination/destination.component';
-import { SpecialOffersComponent } from '@components/special-offers/special-offers.component';
-import { FlightAdviceComponent } from '@components/flight-advice/flight-advice.component';
+import { PopularDestinationsComponent } from '@components/homepageSection-popular-destinations/popular-destinations.component';
+import { DestinationComponent } from '@components/homepageSection-popular-destinations/destination/destination.component';
+import { SpecialOffersComponent } from '@components/homepageSection-special-offers/special-offers.component';
+import { FlightAdviceComponent } from '@components/homepageSection-flight-advice/flight-advice.component';
 import { AppLogoComponent } from '@components/app-logo/app-logo.component';
-import { FormUserInfoComponent } from '@components/form-user-info/form-user-info.component';
+import { FormUserInfoComponent } from '@components/booking-form-user-info/form-user-info.component';
 import { FlightSearchResultListComponent } from '@components/flight-search-result-list/flight-search-result-list.component';
 // tslint:disable-next-line: max-line-length
 import { FlightSearchResultListItemComponent } from '@components/flight-search-result-list/flight-search-result-list-item/flight-search-result-list-item.component';
