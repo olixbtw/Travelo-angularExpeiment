@@ -1,7 +1,15 @@
 @import 'vars';
 @import 'buttons';
+@import 'mixins';
 
 .special-offer {
+
+	@include md {
+		width: 650px;
+	}
+	@include sm {
+		width: calc(100% - 30px);
+	}
 
 	width: 940px;
 	display: flex;
@@ -19,6 +27,17 @@
 
 	&__item {
 
+		@include md {
+			width: 650px;
+			align-items: center;
+			flex-flow: column wrap;
+		}
+		@include sm {
+			width: calc(100% - 30px);
+			align-items: center;
+			flex-flow: column wrap;
+		}
+
 		width: 790px;
 		display: flex;
 		flex-flow: row wrap;
@@ -28,13 +47,31 @@
 	}
 
 	&__item:nth-child(odd) &__img {
+
+		@include md {
+			order: unset;
+		}
 		order: 1;
 	}
 	&__item:nth-child(odd) .offer__button{
+
+		@include md {
+			float: left;
+		}
 		float: right;
 	}
 
 	&__img {
+
+		@include md {
+			margin-bottom: 30px;
+		}
+		@include sm {
+			width: calc(100% - 30px);
+			height: auto;
+			margin-bottom: 30px;
+		}
+
 		width: 470px;
 		height: 245px;
 		border-radius: 10px;
@@ -42,6 +79,10 @@
 	}
 
 	.offer {
+		
+		@include sm {
+			width: calc(100% - 30px);
+		}
 
 		width: 300px;
 		font-size: 15px;
