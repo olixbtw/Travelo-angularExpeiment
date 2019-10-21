@@ -1,6 +1,3 @@
-@import 'forms';
-@import "buttons";
-
 .ticket-details-section {
     margin: 100px auto;
 }
@@ -18,7 +15,7 @@
 .form-inputs-container {
     margin-bottom: 50px;
     margin-top: 35px;
-    
+
     input {
         border-radius: 6px;
         width: 225px;
@@ -26,7 +23,7 @@
     .gender-input {
         width: 60px;
     }
-    
+
     .birthday-input {
        width: 150px;
     }

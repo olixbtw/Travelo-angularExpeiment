@@ -1,5 +1,4 @@
 @import 'vars';
-@import 'buttons';
 @import 'mixins';
 
 .special-offer {
@@ -79,7 +78,7 @@
 	}
 
 	.offer {
-		
+
 		@include sm {
 			width: calc(100% - 30px);
 		}
