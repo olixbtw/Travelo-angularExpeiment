@@ -1,35 +1,101 @@
-@import 'vars';
+@import "vars";
+@import "mixins";
+
+$gap-h: 40px;
+$gap-v: 15px;
 
 :host {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: $gap-v * 3;
 }
 
 .card {
-  border-radius: 20px;
+  border-radius: 15px;
   background: $color-white;
-  padding: 20px;
+  padding: $gap-v 0;
   box-shadow: 2px 5px 10px rgba($color-text, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
+  @include m-sm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   .flights {
     &__item {
-      padding: 10px;
+      padding: $gap-v $gap-h $gap-v/2;
+      display: flex;
+      flex-wrap: wrap;
+
+      .airline,
+      .date,
+      .info {
+        flex-shrink: 0;
+        margin-right: $gap-h/2;
+        &:last-child {
+          margin-right: 0;
+        }
+        margin-bottom: $gap-v/2;
+      }
+      .airline {
+        &__logo {
+          width: 50px;
+          height: 50px;
+          object-fit: contain;
+          vertical-align: top;
+          display: inline-block;
+        }
+        &__name {
+          @include text-overflow();
+          width: 100px;
+          padding-left: $gap-h/4;
+          display: inline-block;
+          color: $color-grey;
+        }
+      }
+      .date {
+        &__time {
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+        &__date {
+          color: $color-grey;
+        }
+      }
+      .info {
+        &__duration {
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+        &__places {
+          color: $color-grey;
+        }
+      }
     }
   }
 
   .book_result {
+    align-self: stretch;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    border-left: 1px solid $color-blue;
-    padding: 20px;
-    padding-right: 10px;
-
+    padding: $gap-v $gap-h;
+    border-top: 1px solid $color-blue;
+    @include sm {
+      margin-top: $gap-v;
+      margin-left: $gap-v * 3/2;
+      margin-right: $gap-v * 3/2;
+    }
+    @include m-sm {
+      border-top: 0px solid;
+      border-left: 1px solid $color-blue;
+    }
     span {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: $color-blue;
     }
   }
 }
