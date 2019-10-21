@@ -1,4 +1,4 @@
-export class User {
+export class Flight {
   // tslint:disable-next-line: variable-name
   _id: string;
   duration: string; // '10H20M';

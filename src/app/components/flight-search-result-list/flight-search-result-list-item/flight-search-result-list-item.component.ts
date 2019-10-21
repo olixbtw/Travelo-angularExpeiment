@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FlightSearchResultListItemComponent implements OnInit {
   // tslint:disable-next-line: no-input-rename
-  @Input('data') tripFlights;
+  @Input('data') tripData;
 
   constructor() { }
 
