@@ -1,3 +1,27 @@
-<div class="flights-filter col">
-	smth
+<div class="flights-filter">
+	<div class="flights-filter__results">
+		Total results:
+	</div>
+	<div class="flights-filter__price">
+		Price:
+		<section class="range-slider">
+			<input value="10" min="0" max="100" step="1" type="range">
+			<input value="90" min="0" max="100" step="1" type="range">
+			<!-- <span class="rangeValues"></span> -->
+		</section>
+			<span class="valueFrom"></span>
+			<hr/>
+			<span class="valueTo"></span>
+	</div>
+	<div class="flights-filter__duration">
+		Duration:
+	</div>
+	<div class="flights-filter__connections">
+		<span class="flights-filter__connections-item">Connections:</span>
+		<div class="checkbox">
+			<input id="direct" type="checkbox">
+			<label for="direct">Direct flights only</label>
+		</div>
+	</div>
+	<div class="flights-filter__button btn">Filter</div>
 </div>
