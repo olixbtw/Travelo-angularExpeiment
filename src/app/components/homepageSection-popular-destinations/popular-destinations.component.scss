@@ -18,4 +18,12 @@ section {
     grid-template-columns: minmax(min-content, 500px);
     justify-content: center;
   }
+
+  @include sm {
+    li {
+      &:nth-child(n + 4) {
+        display: none;
+      }
+    }
+  }
 }

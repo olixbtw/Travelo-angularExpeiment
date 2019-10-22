@@ -40,6 +40,7 @@ $gap: 20px;
   }
   button {
     margin-top: $gap;
+    align-self: flex-start;
   }
 
   @include m-sm() {
