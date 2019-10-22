@@ -1,10 +1,26 @@
+@import 'mixins';
+
 .two-columns {
-  display: flex;
+
   margin: 50px 0;
+  @include m-md {
+    display: flex;
+  }
 
   .col {
     height: 100%;
-    &:first-child{width: 35%;}
-    &:last-child{width: 65%;}
+
+    @include m-md {
+      &:first-child{width: 30%;padding-right:30px;text-align: right;}
+      &:last-child{width: 70%;}
+    }
+    @include m-xlg {
+      &:first-child{width: 32%;padding-right:70px;text-align: right;}
+      &:last-child{width: 68%;}
+    }
+    @include m-xlg {
+      &:first-child{width: 35%;padding-right:100px;text-align: right;}
+      &:last-child{width: 65%;}
+    }
   }
 }
