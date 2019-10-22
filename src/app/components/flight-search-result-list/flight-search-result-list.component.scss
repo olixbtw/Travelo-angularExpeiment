@@ -1,9 +1,16 @@
+@import 'vars';
+
 :host {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-ul {
+.tripsList {
   width: 100%;
+}
+
+.finishedLoading {
+  color: $color-grey;
+  font-size: 1.2rem;
 }
