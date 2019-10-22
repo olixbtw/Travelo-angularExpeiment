@@ -1,0 +1,29 @@
+@import "../vars";
+
+%hero {
+  background: $color-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+
+  // background-image: url("/assets/images/main.jpg");
+  // min-height: 75vh;
+  // padding-top: 120px;
+  // padding-bottom: 60px;
+  background-image: url("/assets/images/main.jpg");
+  min-height: 40vh;
+  padding-top: 110px;
+  padding-bottom: 110px;
+
+  h1 {
+    max-width: 600px;
+    color: $color-white;
+    text-shadow: 0 0 20px rgba($color-text, 0.3);
+    font-size: 45px;
+    margin: 0;
+    // margin-bottom: 25px;
+  }
+}
