@@ -1,6 +1,10 @@
-<ul>
-  <li *ngFor="let trip of tripsList">
+<ul class="tripList">
+  <li *ngFor="let trip of getFlightsList()">
     <app-flight-search-result-list-item [data]="trip"></app-flight-search-result-list-item>
   </li>
 </ul>
-<button class="btn btn--white">Load More</button>
+
+<button *ngIf="itemsToDispaly <= tripsList.length" class="btn btn--white" (click)="loadMoreResults()">
+  Load More
+</button>
+<p *ngIf="itemsToDispaly >= tripsList.length" class="finishedLoading">You have seen all results.</p>

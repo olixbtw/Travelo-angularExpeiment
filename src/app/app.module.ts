@@ -22,6 +22,7 @@ import { FormUserInfoComponent } from '@components/booking-form-user-info/form-u
 import { FlightSearchResultListComponent } from '@components/flight-search-result-list/flight-search-result-list.component';
 // tslint:disable-next-line: max-line-length
 import { FlightSearchResultListItemComponent } from '@components/flight-search-result-list/flight-search-result-list-item/flight-search-result-list-item.component';
+import { FlightsSortComponent } from './components/flights-sort/flights-sort.component';
 
 import { FlightsService } from '@services/flights.service';
 import { FilterService } from '@services/filter.service';
@@ -46,6 +47,7 @@ import { UsersService } from '@services/users.service';
     TripsComponent,
     FlightSearchResultListComponent,
     FlightSearchResultListItemComponent,
+    FlightsSortComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [FlightsService, FilterService, SortService, UsersService],

@@ -1,0 +1,9 @@
+@import "injectable/hero";
+
+.hero {
+  @extend %hero;
+  background-image: url("/assets/images/main.jpg");
+  min-height: 40vh;
+  padding-top: 130px;
+  padding-bottom: 60px;
+}
