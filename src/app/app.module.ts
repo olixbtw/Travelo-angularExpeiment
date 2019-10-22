@@ -22,6 +22,7 @@ import { FormUserInfoComponent } from '@components/booking-form-user-info/form-u
 import { FlightSearchResultListComponent } from '@components/flight-search-result-list/flight-search-result-list.component';
 // tslint:disable-next-line: max-line-length
 import { FlightSearchResultListItemComponent } from '@components/flight-search-result-list/flight-search-result-list-item/flight-search-result-list-item.component';
+import { FlightsSortComponent } from './components/flights-sort/flights-sort.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { FlightSearchResultListItemComponent } from '@components/flight-search-r
     TripsComponent,
     FlightSearchResultListComponent,
     FlightSearchResultListItemComponent,
+    FlightsSortComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
