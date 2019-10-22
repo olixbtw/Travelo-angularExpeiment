@@ -19,16 +19,22 @@ a {
   }
 }
 
+$padding-h:30px;
 .container {
-  @include m-sm(){max-width: $screen-sm - 50px;};
-  @include m-md(){max-width: $screen-md - 100px;};
-  @include m-lg(){max-width: $screen-lg - 150px;};
-  @include m-xlg(){max-width: $screen-lg};
+  @include m-sm() {max-width: $screen-sm - 50px;};
+  @include m-md() {max-width: $screen-md - 150px;};
+  @include m-lg() {max-width: $screen-lg - 250px;};
+  @include m-xlg() {max-width: $screen-lg - 100px};
   width: 100%;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 $padding-h;
   &--lg {
     max-width: $screen-xlg + 500px;
+  }
+  &--sm {
+    @include m-sm() {padding: 0 $padding-h*2;};
+    @include m-md() {padding: 0 $padding-h*3;};
+    @include m-xlg() {padding: 0 $padding-h*5;};
   }
   &__title {
     // h2
