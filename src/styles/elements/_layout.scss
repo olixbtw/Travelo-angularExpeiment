@@ -19,22 +19,22 @@ a {
   }
 }
 
-$padding-h:30px;
+$padding-h:40px;
 .container {
-  @include m-sm() {max-width: $screen-sm - 50px;};
-  @include m-md() {max-width: $screen-md - 150px;};
-  @include m-lg() {max-width: $screen-lg - 250px;};
-  @include m-xlg() {max-width: $screen-lg - 100px};
+  @include m-sm() {max-width: $screen-sm - $padding-h;};
+  @include m-md() {max-width: $screen-md - $padding-h*3;};
+  @include m-lg() {max-width: $screen-lg - $padding-h*5;};
+  @include m-xlg() {max-width: $screen-lg - $padding-h*2};
   width: 100%;
   margin: 0 auto;
   padding: 0 $padding-h;
   &--lg {
-    max-width: $screen-xlg + 500px;
+    max-width: $screen-xlg + $padding-h*13;
   }
   &--sm {
     @include m-sm() {padding: 0 $padding-h*2;};
     @include m-md() {padding: 0 $padding-h*3;};
-    @include m-xlg() {padding: 0 $padding-h*5;};
+    @include m-xlg() {padding: 0 $padding-h*4;};
   }
   &__title {
     // h2
