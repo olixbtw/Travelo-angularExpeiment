@@ -34,6 +34,7 @@ $iconSize: 1.5rem;
       color: $color-grey;
       display: block;
       width: unset;
+      margin-bottom: $gap/6;
     }
   }
 
@@ -57,6 +58,9 @@ $iconSize: 1.5rem;
         &:last-child {
           margin: 0;
         }
+        &--heading {
+          margin-bottom: 0;
+        }
       }
     }
     &::before {
@@ -75,4 +79,47 @@ $iconSize: 1.5rem;
   .btn {
     margin-left: $gap/2;
   }
+}
+
+//for completed trips:
+
+:host.completedTrip {
+  display: flex;
+  .tripId {
+    margin: 0;
+    width: 120px;
+  }
+  .flights-list {
+    width: 100%;
+    margin: 0;
+    padding-left: $gap;
+  }
+  .trip-line {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+    margin-bottom: $gap/2;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &__item {
+      &--destination {
+        width: 100%;
+      }
+    }
+  }
+  // .trip-line {
+  //     margin: 0;
+  //     &--passengers {
+  //       display: none;
+  //     }
+  //   }
+  //   .trip-line__item {
+  //     display: none;
+  //     &--destination {
+  //       width: 100%;
+  //       display: block;
+  //     }
+  //   }
 }

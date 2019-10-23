@@ -27,7 +27,7 @@
 
       <ng-container *ngFor="let trip of tripsList">
         <li class="trip-list-section__list-item" *ngIf="!trip.completed">
-          <app-my-trips-item [data]="trip"></app-my-trips-item>
+          <app-my-trips-item [data]="trip" [ngClass]="{completedTrip:!trip.completed}"></app-my-trips-item>
         </li>
       </ng-container>
 
