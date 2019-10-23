@@ -1,31 +1,31 @@
 module.exports = [
   {
-    img: '/assets/images/boston.jpg',
+    img: 'boston.jpg',
     title: 'Boston',
     description: '13-14 March total sale on round trip in Paris!',
   },
   {
-    img: '/assets/images/tokyo.jpg',
+    img: 'tokyo.jpg',
     title: 'Tokyo',
     description: '13-14 March total sale on round trip in Paris!',
   },
   {
-    img: '/assets/images/paris.jpg',
+    img: 'paris.jpg',
     title: 'Paris',
     description: '13-14 March total sale on round trip in Paris!',
   },
   {
-    img: '/assets/images/new-york.jpg',
+    img: 'new-york.jpg',
     title: 'New York',
     description: '13-14 March total sale on round trip in Paris!',
   },
   {
-    img: '/assets/images/vienna.jpg',
+    img: 'vienna.jpg',
     title: 'Vienna',
     description: '13-14 March total sale on round trip in Paris!',
   },
   {
-    img: '/assets/images/berlin.jpg',
+    img: 'berlin.jpg',
     title: 'Berlin',
     description: '13-14 March total sale on round trip in Paris!',
   },
