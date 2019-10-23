@@ -5,7 +5,9 @@
   <app-flights-sort></app-flights-sort>
 
   <div class="two-columns">
-    <div class="col">FILTER</div>
+    <div class="col">
+		<app-flights-filter></app-flights-filter>
+    </div>
     <div class="col">
       <app-flight-search-result-list [data]="tripsList"></app-flight-search-result-list>
     </div>
