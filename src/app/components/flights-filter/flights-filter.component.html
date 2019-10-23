@@ -5,13 +5,22 @@
 	<div class="flights-filter__price">
 		Price:
 		<section class="range-slider">
-			<input value="10" min="0" max="100" step="1" type="range">
-			<input value="90" min="0" max="100" step="1" type="range">
+				<!-- [(ngModel)]="maxPoint" -->
+			<input 
+				[value]="minPoint" 
+				min="{{minRange}}" 
+				max="{{maxRange}}" 
+				step="1" type="range">
+			<input 
+			    value="80" 
+				min="{{minRange}}" 
+				max="{{maxRange}}" 
+				step="1" type="range">
 			<!-- <span class="rangeValues"></span> -->
 		</section>
-			<span class="valueFrom"></span>
+			<span class="valueFrom">{{minPoint}}</span>
 			<hr/>
-			<span class="valueTo"></span>
+			<span class="valueTo">{{maxPoint}}</span>
 	</div>
 	<div class="flights-filter__duration">
 		Duration:
