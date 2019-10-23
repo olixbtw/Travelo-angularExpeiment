@@ -22,12 +22,17 @@ header {
   align-items: center;
 }
 
-.nav_main {
+.nav-main {
   color: $color-blue;
   font-size: 1.2rem;
   font-weight: bold;
 
-  ul {
+  @include m-lg() {
+    margin-right: 30px;
+    margin-left: auto;
+  }
+
+  &__list {
     @include sm() {
       background: rgba($color-white, 0.45);
       width: 100%;
@@ -40,54 +45,53 @@ header {
     }
     display: flex;
     justify-content: center;
-    li {
-      a {
-        display: block;
-        white-space: nowrap;
-        padding: 5px 10px;
-        margin: 0 2px;
-        &.router-link-active {
-          &:hover {
-            &::after {
-              opacity: 1;
-            }
-          }
-          &::after {
-            opacity: 1;
-            margin-left: 5%;
-            width: 90%;
-          }
-        }
-
-        position: relative;
+  }
+  // &__item {}
+  &__link {
+    display: block;
+    white-space: nowrap;
+    padding: 5px 10px;
+    margin: 0 2px;
+    &.router-link-active {
+      &:hover {
         &::after {
-          content: "";
-          display: block;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          height: 3px;
-          background: $color-orange;
-          opacity: 0.4;
+          opacity: 1;
+        }
+      }
+      &::after {
+        opacity: 1;
+        margin-left: 5%;
+        width: 90%;
+      }
+    }
 
-          margin-left: 50%;
-          width: 0px;
-          transition: all 0.1s ease-in-out;
-        }
-        &:hover {
-          &::after {
-            opacity: 0.8;
-            margin-left: 10%;
-            width: 80%;
-          }
-        }
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background: $color-orange;
+      opacity: 0.4;
+
+      margin-left: 50%;
+      width: 0px;
+      transition: all 0.1s ease-in-out;
+    }
+    &:hover {
+      &::after {
+        opacity: 0.8;
+        margin-left: 10%;
+        width: 80%;
       }
     }
   }
 }
 
-.user_cabinet {
-  .user_image {
+.user-cabinet {
+  &__image {
     background: $color-blue;
     color: $color-white;
     height: 50px;
