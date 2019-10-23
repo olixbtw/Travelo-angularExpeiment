@@ -1,5 +1,5 @@
-@import 'vars';
-@import 'mixins';
+@import "vars";
+@import "mixins";
 
 :host {
   position: fixed;
@@ -10,6 +10,9 @@
   padding: 20px 0;
   z-index: $zi-top;
   box-shadow: 0 0 20px rgba($color-text, 0.3);
+  @include sm {
+    box-shadow: 0 0 5px rgba($color-text, 0.1);
+  }
 }
 
 header {
@@ -25,19 +28,22 @@ header {
   font-weight: bold;
 
   ul {
-    @include sm(){
-      background: rgba($color-white, 0.2);
+    @include sm() {
+      background: rgba($color-white, 0.45);
       width: 100%;
       position: absolute;
       top: 100%;
       left: 50%;
       transform: translateX(-50%);
       padding: 20px 0 10px;
+      box-shadow: 0 5px 15px -5px rgba($color-text, 0.3);
     }
     display: flex;
     justify-content: center;
     li {
       a {
+        display: block;
+        white-space: nowrap;
         padding: 5px 10px;
         margin: 0 2px;
         &.router-link-active {
@@ -55,10 +61,11 @@ header {
 
         position: relative;
         &::after {
-          content: '';
+          content: "";
           display: block;
           position: absolute;
           bottom: 0;
+          left: 0;
           height: 3px;
           background: $color-orange;
           opacity: 0.4;

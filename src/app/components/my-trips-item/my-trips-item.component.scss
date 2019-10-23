@@ -1,4 +1,5 @@
 @import "vars";
+@import "mixins";
 $gap: 30px;
 
 :host {
@@ -51,6 +52,11 @@ $iconSize: 1.5rem;
     background-repeat: no-repeat;
     background-size: contain;
   }
+  &:nth-child(n + 3) {
+    &::before {
+      background-image: url("/assets/ui/plane_back.svg");
+    }
+  }
   &--passsengers {
     .trip-line {
       &__item {
@@ -81,10 +87,81 @@ $iconSize: 1.5rem;
   }
 }
 
+// smaller screens
+@include sm {
+  :host {
+    padding: $gap/5 * 4;
+  }
+  .tripId {
+    margin-bottom: $gap/5 * 3;
+  }
+  .flights-list {
+    margin: $gap/5 * 3 0;
+  }
+  .trip-line {
+    padding-left: $gap/3 * 2;
+    &::before {
+      left: -$gap/10;
+      height: $gap/5 * 3;
+      width: $gap/5 * 3;
+      top: $gap/10;
+    }
+    display: flex;
+    flex-direction: column;
+    &__item {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: $gap/10;
+      &--heading {
+        display: none;
+      }
+    }
+  }
+}
+@include md {
+  @include m-sm {
+    .trip-line {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      &::before {
+        bottom: unset;
+        top: -$iconSize/100;
+      }
+      &__item {
+        width: 49%;
+        width: calc(50% - 15px); // $gap/2 = 15px
+        margin: 0;
+        &--destination {
+          width: 100%;
+          margin-bottom: $gap/10;
+        }
+      }
+    }
+  }
+}
+// buttons group
+@include sm {
+  .btn-group {
+    justify-content: center;
+    .btn {
+      margin: 0 $gap/3;
+    }
+  }
+}
+@include xsm {
+  .btn-group {
+    flex-direction: column;
+    .btn {
+      margin: $gap/3 0 0;
+    }
+  }
+}
+
 //for completed trips:
 
 :host.completedTrip {
   display: flex;
+
   .tripId {
     margin: 0;
     width: 120px;
@@ -109,17 +186,13 @@ $iconSize: 1.5rem;
       }
     }
   }
-  // .trip-line {
-  //     margin: 0;
-  //     &--passengers {
-  //       display: none;
-  //     }
-  //   }
-  //   .trip-line__item {
-  //     display: none;
-  //     &--destination {
-  //       width: 100%;
-  //       display: block;
-  //     }
-  //   }
+  @include sm {
+    flex-direction: column;
+    .tripId {
+      margin-bottom: $gap/3;
+    }
+    .flights-list {
+      padding-left: $gap/3;
+    }
+  }
 }
