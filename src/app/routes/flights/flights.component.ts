@@ -7,9 +7,9 @@ import trips from '@data/mock/fligths-component.mock.js';
   styleUrls: ['./flights.component.scss'],
 })
 export class FlightsComponent implements OnInit {
-  tripsList = trips;
+  tripsList = trips; // get flights according to searched
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }

@@ -1,9 +1,9 @@
-@import 'vars';
+@import "vars";
 
 .form {
   color: $color-blue;
-  background-color: rgba($color: $color-white, $alpha: 0.95);
-  box-shadow: 0 0 5px rgba($color: #000, $alpha: 0.3);
+  background-color: rgba($color-white, 0.95);
+  box-shadow: 0 0 5px rgba($color-text, 0.3);
   padding: 25px 20px;
   border-radius: 3px;
   font-size: 14px;

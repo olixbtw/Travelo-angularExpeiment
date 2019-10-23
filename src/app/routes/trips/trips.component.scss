@@ -1,9 +1,25 @@
 @import "injectable/hero";
+// @import "vars";
 
+$gap: 40px;
 .hero {
   @extend %hero;
   background-image: url("/assets/images/main.jpg");
   min-height: 40vh;
   padding-top: 130px;
   padding-bottom: 60px;
+
+  margin-bottom: $gap;
 }
+
+.trip-list-section {
+  margin: $gap * 3/2 0;
+  &__heading {
+    color: $color-blue;
+  }
+  &__list-item {
+    margin-top: $gap/3 * 2;
+  }
+}
+
+// .past-trips-list {

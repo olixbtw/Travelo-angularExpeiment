@@ -1,0 +1,31 @@
+<div class="tripId">TY63587</div>
+<hr>
+
+<ul class="flights-list">
+
+  <li class="flights-list__item flights-list__item--passsengers">
+    <span class="passengers__heading">Passengers:</span>
+    <ul class="passengers__list">
+      <li>Anastasiya Vlasenko</li>
+    </ul>
+  </li>
+
+  <li class="flights-list__item" *ngFor="let flight of tripInfo.flights">
+    <div class="destination">
+      {{flight.departure.city}} - {{flight.arrival.city}}
+    </div>
+    <div class="departure">
+      <span>Departure:</span>
+      {{flight.date}}, {{flight.departure.time}}
+    </div>
+    <div class="arrival">
+      <span>Arrival:</span>
+      {{flight.date}}, {{flight.arrival.time}}
+    </div>
+  </li>
+</ul>
+
+<div class="btn-group">
+  <button class="btn btn--white">Download PDF</button>
+  <button class="btn">Send On Email</button>
+</div>

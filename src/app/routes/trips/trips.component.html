@@ -1,19 +1,36 @@
 <div class="hero">
   <div class="container">
-    <h1>Life is to short to quit travelling</h1>
+    <h1 class="hero_h1">Life is to short to quit travelling</h1>
   </div>
 </div>
+
 <div class="container">
   <h1>My trips</h1>
-  <p class="grey-text">Keep all your trips in one place</p>
+  <p>Keep all your trips in one place</p>
 
-  <h2>Upcoming trips</h2>
-  <ul>
-    <li></li>
-  </ul>
+  <section class="trip-list-section">
+    <h2 class="trip-list-section__heading">Upcoming trips</h2>
+    <ul class="trip-list-section__list">
 
-  <h2>Past Trips</h2>
-  <ul>
-    <li></li>
-  </ul>
+      <ng-container *ngFor="let trip of tripsList">
+        <li class="trip-list-section__list-item" *ngIf="trip.completed">
+          <app-my-trips-item [data]="trip"></app-my-trips-item>
+        </li>
+      </ng-container>
+
+    </ul>
+  </section>
+
+  <section class="trip-list-section">
+    <h2 class="trip-list-section__heading">Past Trips</h2>
+    <ul class="trip-list-section__list">
+
+      <ng-container *ngFor="let trip of tripsList">
+        <li class="trip-list-section__list-item" *ngIf="!trip.completed">
+          <app-my-trips-item [data]="trip"></app-my-trips-item>
+        </li>
+      </ng-container>
+
+    </ul>
+  </section>
 </div>

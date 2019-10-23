@@ -1,4 +1,8 @@
 .btn {
+  // letter-spacing: 3px;
+  // text-transform: uppercase;
+  min-width: 120px;
+  min-height: 40px;
   display: inline-block;
   border: none;
   color: $color-white;
@@ -6,26 +10,21 @@
   background-color: $color-blue;
   padding: 10px 25px;
   font-size: 14px;
-  font-family: sans-serif;
-  // text-transform: uppercase;
   font-weight: 600;
-  // letter-spacing: 3px;
   border-radius: 2px;
   text-align: center;
   position: relative;
   outline: none;
-  transition: background-color .5s ease;
   cursor: pointer;
+  border: 1px solid $color-blue;
+  transition: background-color 0.5s ease;
   &:hover {
+    border-color: lighten($color-blue, 5%);
     background-color: lighten($color-blue, 5%);
-  };
+  }
   &--white {
-    width: 120px;
-    height: 40px;
     color: $color-blue;
     background-color: $color-white;
-    padding: 0;
-    border: 1px solid $color-blue;
     transition-property: background-color, color;
   }
   &--white:hover {
