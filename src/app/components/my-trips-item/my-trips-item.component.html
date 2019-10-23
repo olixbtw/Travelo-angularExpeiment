@@ -3,23 +3,23 @@
 
 <ul class="flights-list">
 
-  <li class="flights-list__item flights-list__item--passsengers">
-    <span class="passengers__heading">Passengers:</span>
-    <ul class="passengers__list">
+  <li class="trip-line trip-line--passsengers">
+    <span class="trip-line__item trip-line__item--heading">Passengers:</span>
+    <ul class="trip-line__item passengers-list">
       <li>Anastasiya Vlasenko</li>
     </ul>
   </li>
 
-  <li class="flights-list__item" *ngFor="let flight of tripInfo.flights">
-    <div class="destination">
-      {{flight.departure.city}} - {{flight.arrival.city}}
+  <li class="trip-line" *ngFor="let flight of tripInfo.flights">
+    <div class="trip-line__item trip-line__item--destination">
+      {{flight.departure.city}} (KBP) - {{flight.arrival.city}} (KBP)
     </div>
-    <div class="departure">
-      <span>Departure:</span>
+    <div class="trip-line__item trip-line__item--departure">
+      <span class="trip-line__item trip-line__item--heading">Departure:</span>
       {{flight.date}}, {{flight.departure.time}}
     </div>
-    <div class="arrival">
-      <span>Arrival:</span>
+    <div class="trip-line__item trip-line__item--arrival">
+      <span class="trip-line__item trip-line__item--heading">Arrival:</span>
       {{flight.date}}, {{flight.arrival.time}}
     </div>
   </li>

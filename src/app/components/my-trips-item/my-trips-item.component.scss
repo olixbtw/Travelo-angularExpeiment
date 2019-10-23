@@ -9,6 +9,64 @@ $gap: 30px;
   box-shadow: 2px 4px 20px rgba($color-text, 0.2);
 }
 
+.tripId {
+  margin-bottom: $gap * 2 / 3;
+}
+
+$iconSize: 1.5rem;
+.flights-list {
+  margin: $gap * 2 / 3 0;
+  font-size: 1.1rem;
+}
+.trip-line {
+  position: relative;
+  padding-left: $iconSize * 7/4;
+  margin-bottom: $gap/2;
+  display: flex;
+  align-items: flex-end;
+  &__item {
+    width: 33%;
+    margin-right: $gap * 2/3;
+    &:last-child {
+      margin-right: 0;
+    }
+    &--heading {
+      color: $color-grey;
+      display: block;
+      width: unset;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    bottom: -$iconSize/100;
+
+    content: "";
+    display: block;
+    height: $iconSize;
+    width: $iconSize;
+    background-image: url("/assets/ui/plane_to.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &--passsengers {
+    .trip-line {
+      &__item {
+        margin-right: $gap * 3/2;
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+    &::before {
+      top: -$iconSize/100;
+      bottom: unset;
+      background-image: url("/assets/ui/profile.svg");
+    }
+  }
+}
+
 .btn-group {
   display: flex;
   justify-content: flex-end;
@@ -17,8 +75,4 @@ $gap: 30px;
   .btn {
     margin-left: $gap/2;
   }
-}
-
-span {
-  color: $color-grey;
 }
