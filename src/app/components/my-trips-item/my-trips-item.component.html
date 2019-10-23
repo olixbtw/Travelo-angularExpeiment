@@ -1,0 +1,49 @@
+<div class="tripId">TY63587</div>
+<ng-container *ngIf="tripInfo.completed">
+  <hr>
+  <ul class="flights-list">
+
+    <li class="trip-line trip-line--passsengers">
+      <span class="trip-line__item trip-line__item--heading">Passengers:</span>
+      <ul class="trip-line__item passengers-list">
+        <li>Anastasiya Vlasenko</li>
+      </ul>
+    </li>
+
+    <li class="trip-line" *ngFor="let flight of tripInfo.flights">
+      <div class="trip-line__item trip-line__item--destination">
+        {{flight.departure.city}} (KBP) - {{flight.arrival.city}} (KBP)
+      </div>
+      <div class="trip-line__item trip-line__item--departure">
+        <span class="trip-line__item trip-line__item--heading">Departure:</span>
+        {{flight.date}}, {{flight.departure.time}}
+      </div>
+      <div class="trip-line__item trip-line__item--arrival">
+        <span class="trip-line__item trip-line__item--heading">Arrival:</span>
+        {{flight.date}}, {{flight.arrival.time}}
+      </div>
+    </li>
+  </ul>
+
+  <div class="btn-group">
+    <button class="btn btn--white">Download PDF</button>
+    <button class="btn">Send On Email</button>
+  </div>
+
+
+
+
+</ng-container>
+
+<ng-container *ngIf="!tripInfo.completed">
+  <ul class="flights-list">
+    <li class="trip-line" *ngFor="let flight of tripInfo.flights">
+      <div class="trip-line__item trip-line__item--destination">
+        {{flight.departure.city}} (KBP) - {{flight.arrival.city}} (KBP)
+      </div>
+      <div class="trip-line__item">
+        {{flight.date}}
+      </div>
+    </li>
+  </ul>
+</ng-container>

@@ -1,4 +1,5 @@
-<a [routerLink]="'/err'" class="destination" [style.backgroundImage]="'url(' + destination.img + ')'">
+<a [routerLink]="'/err'" class="destination">
+  <img class="destination__image" src="assets/images/{{destination.img}}" alt="{{destination.title}}">
   <h3 class="destination__title">{{ destination.title }}</h3>
   <p class="destination__description">{{ destination.description }}</p>
 </a>
