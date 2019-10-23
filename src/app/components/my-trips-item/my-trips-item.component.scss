@@ -1,0 +1,198 @@
+@import "vars";
+@import "mixins";
+$gap: 30px;
+
+:host {
+  display: block;
+  padding: $gap;
+  border-radius: $gap/2;
+  background: $color-white;
+  box-shadow: 2px 4px 20px rgba($color-text, 0.2);
+}
+
+.tripId {
+  margin-bottom: $gap * 2 / 3;
+}
+
+$iconSize: 1.5rem;
+.flights-list {
+  margin: $gap * 2 / 3 0;
+  font-size: 1.1rem;
+}
+.trip-line {
+  position: relative;
+  padding-left: $iconSize * 7/4;
+  margin-bottom: $gap/2;
+  display: flex;
+  align-items: flex-end;
+  &__item {
+    width: 33%;
+    margin-right: $gap * 2/3;
+    &:last-child {
+      margin-right: 0;
+    }
+    &--heading {
+      color: $color-grey;
+      display: block;
+      width: unset;
+      margin-bottom: $gap/6;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    bottom: -$iconSize/100;
+
+    content: "";
+    display: block;
+    height: $iconSize;
+    width: $iconSize;
+    background-image: url("/assets/ui/plane_to.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &:nth-child(n + 3) {
+    &::before {
+      background-image: url("/assets/ui/plane_back.svg");
+    }
+  }
+  &--passsengers {
+    .trip-line {
+      &__item {
+        margin-right: $gap * 3/2;
+        &:last-child {
+          margin: 0;
+        }
+        &--heading {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &::before {
+      top: -$iconSize/100;
+      bottom: unset;
+      background-image: url("/assets/ui/profile.svg");
+    }
+  }
+}
+
+.btn-group {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  .btn {
+    margin-left: $gap/2;
+  }
+}
+
+// smaller screens
+@include sm {
+  :host {
+    padding: $gap/5 * 4;
+  }
+  .tripId {
+    margin-bottom: $gap/5 * 3;
+  }
+  .flights-list {
+    margin: $gap/5 * 3 0;
+  }
+  .trip-line {
+    padding-left: $gap/3 * 2;
+    &::before {
+      left: -$gap/10;
+      height: $gap/5 * 3;
+      width: $gap/5 * 3;
+      top: $gap/10;
+    }
+    display: flex;
+    flex-direction: column;
+    &__item {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: $gap/10;
+      &--heading {
+        display: none;
+      }
+    }
+  }
+}
+@include md {
+  @include m-sm {
+    .trip-line {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      &::before {
+        bottom: unset;
+        top: -$iconSize/100;
+      }
+      &__item {
+        width: 49%;
+        width: calc(50% - 15px); // $gap/2 = 15px
+        margin: 0;
+        &--destination {
+          width: 100%;
+          margin-bottom: $gap/10;
+        }
+      }
+    }
+  }
+}
+// buttons group
+@include sm {
+  .btn-group {
+    justify-content: center;
+    .btn {
+      margin: 0 $gap/3;
+    }
+  }
+}
+@include xsm {
+  .btn-group {
+    flex-direction: column;
+    .btn {
+      margin: $gap/3 0 0;
+    }
+  }
+}
+
+//for completed trips:
+
+:host.completedTrip {
+  display: flex;
+
+  .tripId {
+    margin: 0;
+    width: 120px;
+  }
+  .flights-list {
+    width: 100%;
+    margin: 0;
+    padding-left: $gap;
+  }
+  .trip-line {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+    margin-bottom: $gap/2;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &__item {
+      &--destination {
+        width: 100%;
+      }
+    }
+  }
+  @include sm {
+    flex-direction: column;
+    .tripId {
+      margin-bottom: $gap/3;
+    }
+    .flights-list {
+      padding-left: $gap/3;
+    }
+  }
+}

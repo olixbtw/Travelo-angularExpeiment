@@ -8,9 +8,9 @@ describe('FormUserInfoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FormUserInfoComponent ]
+      declarations: [FormUserInfoComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

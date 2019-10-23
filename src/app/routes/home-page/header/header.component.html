@@ -3,17 +3,17 @@
 
     <app-logo></app-logo>
 
-    <nav class="nav_main">
-      <ul>
-        <li><a [routerLink]="['/flights']" routerLinkActive="router-link-active">Fligths</a></li>
-        <li><a [routerLink]="['/trips']" routerLinkActive="router-link-active">My trips</a></li>
-        <li><a [routerLink]="['/helper']" routerLinkActive="router-link-active">Trip helper</a></li>
+    <nav class="nav-main">
+      <ul class="nav-main__list">
+        <li class="nav-main__item"><a class="nav-main__link" [routerLink]="['/flights']" routerLinkActive="router-link-active">Fligths</a></li>
+        <li class="nav-main__item"><a class="nav-main__link" [routerLink]="['/trips']" routerLinkActive="router-link-active">My trips</a></li>
+        <li class="nav-main__item"><a class="nav-main__link" [routerLink]="['/helper']" routerLinkActive="router-link-active">Trip helper</a></li>
       </ul>
     </nav>
 
-    <div class="user_cabinet">
-      <a [routerLink]="['/err']">
-        <div class="user_image">
+    <div class="user-cabinet">
+      <a class="user-cabinet__link" [routerLink]="['/err']">
+        <div class="user-cabinet__image">
           AV
         </div>
       </a>

@@ -26,6 +26,7 @@ module.exports = [
     to: 'Paris',
     totalDuration: '10h',
     totalCost: '$300',
+    completed: false,
     flights: [
       {
         departure: { city: 'Kyiv', time: '11:45' },
@@ -51,6 +52,7 @@ module.exports = [
     to: 'Riga',
     totalDuration: '13h',
     totalCost: '$200',
+    completed: false,
     flights: [
       {
         departure: { city: 'Athens', time: '11:45' },
@@ -76,6 +78,7 @@ module.exports = [
     to: 'Riga',
     totalDuration: '5h',
     totalCost: '$100',
+    completed: true,
     flights: [
       {
         departure: { city: 'Athens', time: '11:45' },
@@ -93,6 +96,7 @@ module.exports = [
     to: 'Paris',
     totalDuration: '10h',
     totalCost: '$300',
+    completed: true,
     flights: [
       {
         departure: { city: 'Kyiv', time: '11:45' },
@@ -118,6 +122,7 @@ module.exports = [
     to: 'Riga',
     totalDuration: '13h',
     totalCost: '$200',
+    completed: true,
     flights: [
       {
         departure: { city: 'Athens', time: '11:45' },
@@ -143,6 +148,7 @@ module.exports = [
     to: 'Riga',
     totalDuration: '5h',
     totalCost: '$100',
+    completed: true,
     flights: [
       {
         departure: { city: 'Athens', time: '11:45' },
@@ -160,6 +166,7 @@ module.exports = [
     to: 'Paris',
     totalDuration: '10h',
     totalCost: '$300',
+    completed: true,
     flights: [
       {
         departure: { city: 'Kyiv', time: '11:45' },
@@ -185,6 +192,7 @@ module.exports = [
     to: 'Riga',
     totalDuration: '13h',
     totalCost: '$200',
+    completed: true,
     flights: [
       {
         departure: { city: 'Athens', time: '11:45' },
@@ -210,6 +218,7 @@ module.exports = [
     to: 'Riga',
     totalDuration: '5h',
     totalCost: '$100',
+    completed: true,
     flights: [
       {
         departure: { city: 'Athens', time: '11:45' },
@@ -227,6 +236,7 @@ module.exports = [
     to: 'Paris',
     totalDuration: '10h',
     totalCost: '$300',
+    completed: true,
     flights: [
       {
         departure: { city: 'Kyiv', time: '11:45' },
@@ -252,6 +262,7 @@ module.exports = [
     to: 'Riga',
     totalDuration: '13h',
     totalCost: '$200',
+    completed: true,
     flights: [
       {
         departure: { city: 'Athens', time: '11:45' },
@@ -277,6 +288,7 @@ module.exports = [
     to: 'Riga',
     totalDuration: '5h',
     totalCost: '$100',
+    completed: true,
     flights: [
       {
         departure: { city: 'Athens', time: '11:45' },
@@ -294,6 +306,7 @@ module.exports = [
     to: 'Paris',
     totalDuration: '10h',
     totalCost: '$300',
+    completed: true,
     flights: [
       {
         departure: { city: 'Kyiv', time: '11:45' },
@@ -319,6 +332,7 @@ module.exports = [
     to: 'Riga',
     totalDuration: '13h',
     totalCost: '$200',
+    completed: false,
     flights: [
       {
         departure: { city: 'Athens', time: '11:45' },
@@ -344,6 +358,7 @@ module.exports = [
     to: 'Riga',
     totalDuration: '5h',
     totalCost: '$100',
+    completed: false,
     flights: [
       {
         departure: { city: 'Athens', time: '11:45' },

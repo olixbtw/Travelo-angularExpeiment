@@ -10,16 +10,15 @@
   }
 
   &__item {
-    @include md {
-      flex-flow: column wrap;
-    }
-
     display: flex;
     flex-flow: row;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 90px;
 
+    @include md {
+      flex-flow: column wrap;
+    }
     @include m-md {
       justify-content: center;
     }
@@ -83,6 +82,7 @@
 
     &__button {
       margin-top: 10px;
+      align-self: flex-start;
     }
   }
 }
