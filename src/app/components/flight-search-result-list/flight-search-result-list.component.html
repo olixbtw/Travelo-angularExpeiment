@@ -1,10 +1,10 @@
 <ul class="tripList">
-  <li *ngFor="let trip of getFlightsList()">
+  <li *ngFor="let trip of flightsService.getFilteredTrips(itemsToDispaly); index as i">
     <app-flight-search-result-list-item [data]="trip"></app-flight-search-result-list-item>
   </li>
 </ul>
 
-<button *ngIf="itemsToDispaly <= tripsList.length" class="btn btn--white" (click)="loadMoreResults()">
+<button *ngIf="!isAllResults()" class="btn btn--white" (click)="loadMoreResults()">
   Load More
 </button>
-<p *ngIf="itemsToDispaly >= tripsList.length" class="finishedLoading">You have seen all results.</p>
+<p *ngIf="isAllResults()" class="finishedLoading">You have seen all results.</p>

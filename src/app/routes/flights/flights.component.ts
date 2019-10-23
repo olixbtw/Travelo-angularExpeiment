@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import trips from '@data/mock/fligths-component.mock.js';
 
 @Component({
   selector: 'app-flights',
@@ -7,9 +6,13 @@ import trips from '@data/mock/fligths-component.mock.js';
   styleUrls: ['./flights.component.scss'],
 })
 export class FlightsComponent implements OnInit {
+<<<<<<< HEAD
   tripsList = trips; // get flights according to searched
 
   constructor() { }
+=======
+  constructor() {}
+>>>>>>> oleh_lemeshenko
 
   ngOnInit() { }
 }

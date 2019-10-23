@@ -6,6 +6,7 @@
   </div>
 
   <div class="passenger-form-container">
+<<<<<<< HEAD
 
     <form action="#" method="post" [formGroup]="searchForm" class="passenger-form form">
 
@@ -67,5 +68,81 @@
     </form>
 
   </div>
+=======
+    <form action="#" method="post" [formGroup]="bookingForm" class="passenger-form form">
+      <h2>Passenger 1</h2>
 
+      <div class="form-inputs-container">
+        <div class="form-row">
+          <label>
+            Name <br />
+            <input type="text" formControlName="firstName" placeholder="Type something" class="formcontrol"/><br
+          /></label>
+          <label
+            >Last Name: <br />
+            <input type="text" formControlName="lastName" placeholder="Type something" class="formcontrol"
+          /></label>
+        </div>
+
+        <div class="form-row form-row-with-gender">
+          <label>
+            Country <br />
+            <input list="countries" formControlName="country" placeholder="Type something" class="formcontrol" />
+            <datalist id="countries">
+              <option value="Uganda"> </option>
+              <option value="Ukraine"> </option>
+              <option value="United Arab Emirates"> </option>
+            </datalist>
+
+            <br />
+          </label>
+
+          <label>
+            Gender <br />
+            <input list="gender" formControlName="sex" placeholder="f/e" class="formcontrol gender-input" />
+            <datalist id="gender">
+              <option value="f"> </option>
+              <option value="m"> </option>
+            </datalist>
+
+            <br />
+          </label>
+
+          <label
+            >Date of Birth <br />
+            <input type="date" formControlName="bday" class="formcontrol birthday-input"/><br
+          /></label>
+        </div>
+
+        <div class="form-row">
+          <label>
+            Passport ID <br />
+            <input type="text" formControlName="passportId" placeholder="Type something" class="formcontrol"/><br
+          /></label>
+          <label
+            >Passport or ID expiry date <br />
+            <input type="date" formControlName="expirydate" class="formcontrol"
+          /></label>
+        </div>
+      </div>
+
+      <div class="luggage-block">
+        <h2>Luggage</h2>
+        <p>Choose the luggage to want to travel with</p>
+        <p>
+          <input formControlName="luggage" type="checkbox" />
+          <span>Bag up to 24k.($20 additional cost)</span>
+        </p>
+      </div>
+>>>>>>> oleh_lemeshenko
+
+      <div class="form-footer-container">
+        <h2>Total:</h2>
+        <div>
+          <div class="total-cost">$176</div>
+          <button class="btn">Book</button>
+        </div>
+      </div>
+    </form>
+  </div>
 </section>

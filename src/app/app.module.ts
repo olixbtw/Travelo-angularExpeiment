@@ -2,8 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { CalendarModule } from 'primeng/calendar';
 import { AppRoutingModule } from '@app/app-routing.module';
 import { AppComponent } from '@app/app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HomePageComponent } from '@routes/home-page/home-page.component';
 import { FlightsComponent } from '@routes/flights/flights.component';
@@ -51,7 +53,7 @@ import { UsersService } from '@services/users.service';
     FlightsSortComponent,
     MyTripsItemComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, CalendarModule, BrowserAnimationsModule],
   providers: [FlightsService, FilterService, SortService, UsersService],
   bootstrap: [AppComponent],
 })
