@@ -1,61 +1,62 @@
 .ticket-details-section {
-    margin: 100px auto;
+  margin: 100px auto;
 }
 
 .passenger-form-container {
-    width: 470px;
-    margin: auto;
+  width: 470px;
+  margin: auto;
 }
 
 .passenger-form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-inputs-container {
-    margin-bottom: 50px;
-    margin-top: 35px;
+  margin-bottom: 50px;
+  margin-top: 35px;
 
-    input {
-        border-radius: 6px;
-        width: 225px;
-    }
-    .gender-input {
-        width: 60px;
-    }
+  input {
+    border-radius: 6px;
+    width: 225px;
+  }
+  .gender-input {
+    width: 60px;
+  }
 
-    .birthday-input {
-       width: 150px;
-    }
+  .birthday-input {
+    width: 150px;
+  }
 }
 
 .form-row-with-gender {
-    display: flex;
+  display: flex;
 }
 
 .form-row {
-    display: flex;
-    margin-bottom: 25px;
+  display: flex;
+  margin-bottom: 25px;
 }
 
 .form-footer-container {
-    display: flex;
-    justify-content: space-between;
-    text-align: right;
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  margin-top: 25px;
+
+  button {
     margin-top: 25px;
+  }
 
-    button {
-        margin-top: 25px;
-    }
-
-    .total-cost {
-        font-size: 25px;
-        font-weight: bold;
-    }
+  .total-cost {
+    font-size: 25px;
+    font-weight: bold;
+  }
 }
 
 .luggage-block {
-    p, h2 {
-        margin-bottom: 10px;
-    }
+  p,
+  h2 {
+    margin-bottom: 10px;
+  }
 }
