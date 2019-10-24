@@ -1,0 +1,9 @@
+@import "../vars";
+
+$gap: 15px;
+%card {
+  border-radius: $gap;
+  background: $color-white;
+  padding: $gap * 2;
+  box-shadow: 2px 5px 15px rgba($color-text, 0.2);
+}

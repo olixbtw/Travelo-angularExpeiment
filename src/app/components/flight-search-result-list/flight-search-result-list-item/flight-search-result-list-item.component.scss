@@ -1,16 +1,14 @@
 @import "vars";
 @import "mixins";
+@import "injectable/card";
 
 $gap-h: 40px;
 $gap-v: 15px;
 
 :host {
+  @extend %card;
   display: block;
-  border-radius: 15px;
-  background: $color-white;
-  padding: $gap-v 0;
-  box-shadow: 2px 5px 10px rgba($color-text, 0.2);
-  width: 100%;
+  padding: $gap-v * 3/2 0;
 
   @include m-sm {
     display: flex;
