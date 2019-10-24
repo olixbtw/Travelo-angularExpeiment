@@ -1,12 +1,9 @@
 <div class="flights-filter">
 	<div class="flights-filter__results">
-		Total results:
+		<p>Total results:</p>
+		<span>{{totalResults}}</span>
 	</div>
-<!-- Comment below is test -->
-<!-- <input type="range" step="1" min="0" max="100" 
-		value="{{named}}" 
-		[(ngModel)]="named">
-	<div  [textContent]="named"></div> -->
+
 	<div class="flights-filter__price">
 		Price:
 		<section class="range-slider">
@@ -15,23 +12,21 @@
 				min="{{minRange}}" 
 				max="{{maxRange}}" 
 				[value]="minValue"
-				[ngModel]="minValue"
-				(ngModelChange)="minValue <= maxValue ? (minValue=$event) : (maxValue=$event)"
+				[(ngModel)]="minValue"
 			/>
-				<!-- [(ngModel)]="minValue" -->
 			<input 
 				min="{{minRange}}" 
 				max="{{maxRange}}" 
 				step="1" type="range"
 				[value]="maxValue" 
-				[ngModel]="maxValue"
-				(ngModelChange)="maxValue >= minValue ? (maxValue=$event) : (minValue=$event)"
+				[(ngModel)]="maxValue"
 			/>
-				<!-- [(ngModel)]="maxValue" -->
 		</section>
-		<span class="valueFrom">{{minValue}}</span>
+		<span *ngIf="minValue < maxValue" class="valueFrom">${{minValue}}</span>
+		<span *ngIf="minValue >= maxValue" class="valueTo">${{maxValue}}</span>
 		<hr/>
-		<span class="valueTo" [textContent]="maxValue"></span>
+		<span *ngIf="minValue >= maxValue" class="valueFrom">${{minValue}}</span>
+		<span *ngIf="minValue < maxValue" class="valueTo">${{maxValue}}</span>
 	</div>
 
 
@@ -39,6 +34,27 @@
 
 	<div class="flights-filter__duration">
 		Duration:
+		<section class="range-slider">
+			<input 
+				step="1" type="range"
+				min="{{minDuration}}" 
+				max="{{maxDuration}}" 
+				[value]="minDurValue"
+				[(ngModel)]="minDurValue"
+			/>
+			<input 
+				min="{{minDuration}}" 
+				max="{{maxDuration}}" 
+				step="1" type="range"
+				[value]="maxDurValue" 
+				[(ngModel)]="maxDurValue"
+			/>
+		</section>
+		<span *ngIf="minDurValue < maxDurValue" class="valueFrom">${{minDurValue}}h.</span>
+		<span *ngIf="minDurValue >= maxDurValue" class="valueTo">${{maxDurValue}}h.</span>
+		<hr/>
+		<span *ngIf="minDurValue >= maxDurValue" class="valueFrom">${{minDurValue}}h.</span>
+		<span *ngIf="minDurValue < maxDurValue" class="valueTo">${{maxDurValue}}h.</span>
 	</div>
 	<div class="flights-filter__connections">
 		<span class="flights-filter__connections-item">Connections:</span>

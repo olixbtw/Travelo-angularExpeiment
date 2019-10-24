@@ -8,19 +8,27 @@ import { Component, OnInit } from '@angular/core';
 export class FlightsFilterComponent implements OnInit {
 
   // public
-  public minRange: number = 0;
-  public maxRange: number = 200;
+  public totalResults = 54;
 
-  public minValue = 1;
-  public maxValue = 199;
+  public minRange = 0;
+  public maxRange = 200;
+
+  public minValue = this.minRange;
+  public maxValue = this.maxRange;
+
+  public minDuration = 1;
+  public maxDuration = 14;
+
+  public minDurValue = 3;
+  public maxDurValue = 12;
+
+  condition = false;
 
   constructor() {
   }
 
   ngOnInit() {
   }
-
-  
 
 }
 
