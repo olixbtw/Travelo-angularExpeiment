@@ -2,6 +2,7 @@
 
 $gap: 15px;
 %card {
+  display: block;
   border-radius: $gap;
   background: $color-white;
   padding: $gap * 2;

@@ -7,7 +7,6 @@ $gap-v: 15px;
 
 :host {
   @extend %card;
-  display: block;
   padding: $gap-v * 3/2 0;
 
   @include m-sm {

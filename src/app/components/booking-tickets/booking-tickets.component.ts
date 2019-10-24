@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FlightsService } from '@services/flights.service';
 
-
 @Component({
   selector: 'app-booking-tickets',
   templateUrl: './booking-tickets.component.html',
@@ -13,7 +12,7 @@ export class BookingTicketsComponent implements OnInit {
 
   ngOnInit() {
     this.bookedFlight = this.flightsService.filteredTrips[0];
-    console.log(this.bookedFlight);
+    // console.log(this.bookedFlight);
   }
 
 }
