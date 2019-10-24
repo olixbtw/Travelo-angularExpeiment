@@ -31,6 +31,7 @@ import { FlightsService } from '@services/flights.service';
 import { FilterService } from '@services/filter.service';
 import { SortService } from '@services/sort.service';
 import { UsersService } from '@services/users.service';
+import { FlightPaymentComponent } from './flight-payment/flight-payment.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { UsersService } from '@services/users.service';
     FlightSearchResultListItemComponent,
     FlightsSortComponent,
     MyTripsItemComponent,
+    FlightPaymentComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, CalendarModule, BrowserAnimationsModule],
   providers: [FlightsService, FilterService, SortService, UsersService],

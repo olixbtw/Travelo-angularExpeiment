@@ -1,0 +1,111 @@
+@import "vars";
+
+.payment-section {
+  margin: 100px auto;
+}
+
+.billing-container {
+  margin-left: 100px;
+  width: 630px;
+
+  h2 {
+    margin-top: 105px;
+    margin-bottom: 50px;
+  }
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  input {
+    height: 35px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 225px;
+    margin-bottom: 15px;
+  }
+
+  input:focus {
+    border-color: $color-blue;
+  }
+
+  .endDate-cv2-container {
+    display: flex;
+    justify-content: space-between;
+
+    .endDate {
+      width: 145px;
+    }
+
+    .cv2 {
+      width: 65px;
+    }
+  }
+}
+
+.info-icon {
+  width: 17px;
+  height: 17px;
+}
+
+.card-image {
+  width: 225px;
+  height: 145px;
+  border: 1px solid $color-blue;
+  border-radius: 5px;
+
+  .blue-line {
+    height: 32px;
+    background-color: $color-blue;
+    margin-top: 16px;
+  }
+
+  .card-image-text {
+    margin-top: 24px;
+    width: 145px;
+    border: 1px solid $color-blue;
+    border-left: none;
+    display: flex;
+
+    .card-image-cvv {
+      text-align: right;
+      padding-right: 10px;
+      width: 115px;
+      border-right: 1px solid $color-blue;
+    }
+
+    .card-image-stars {
+      width: 30px;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+}
+
+#agreement {
+    zoom: 1.6;
+    margin-right: 5px;
+}
+
+.checbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  
+
+  .checbox-text {
+    font-size: 12px;
+    color: $color-grey;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.btn {
+  background-color: rgba(0,0,255,0.5);
+}
