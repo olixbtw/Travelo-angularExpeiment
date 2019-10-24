@@ -12,8 +12,6 @@ export class MyTripsItemComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    console.log(this.tripInfo);
-  }
+  ngOnInit() { }
 
 }

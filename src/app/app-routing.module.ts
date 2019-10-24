@@ -13,20 +13,16 @@ const routes: Routes = [
   },
   {
     path: 'flights',
-    component: FlightsComponent,
+    component: FlightsComponent
   },
   {
     path: 'trips',
     component: TripsComponent,
   },
   {
-    path: 'helper',
+    path: '**',
     component: ErrorPathComponent,
-  },
-  {
-    path: 'err',
-    component: ErrorPathComponent,
-  },
+  }
 ];
 
 @NgModule({

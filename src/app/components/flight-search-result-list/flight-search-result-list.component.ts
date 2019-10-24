@@ -1,6 +1,5 @@
 import { FlightsService } from '@services/flights.service';
-import { Flight } from '@data/model/flight';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-flight-search-result-list',
@@ -10,9 +9,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class FlightSearchResultListComponent implements OnInit {
   // tslint:disable-next-line: no-input-rename
   itemsToDispaly = 0;
-  displaySMTH = true;
 
-  constructor(private flightsService: FlightsService) {}
+  constructor(private flightsService: FlightsService) { }
 
   ngOnInit() {
     this.itemsToDispaly = 4;

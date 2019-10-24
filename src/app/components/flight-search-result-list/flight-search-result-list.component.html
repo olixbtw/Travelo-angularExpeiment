@@ -1,5 +1,5 @@
 <ul class="tripList">
-  <li *ngFor="let trip of flightsService.getFilteredTrips(itemsToDispaly); index as i">
+  <li class="tripList__item" *ngFor="let trip of flightsService.getFilteredTrips(itemsToDispaly); index as i">
     <app-flight-search-result-list-item [data]="trip"></app-flight-search-result-list-item>
   </li>
 </ul>
