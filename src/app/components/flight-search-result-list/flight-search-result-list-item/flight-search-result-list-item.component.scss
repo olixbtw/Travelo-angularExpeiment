@@ -1,8 +1,9 @@
 @import "vars";
 @import "mixins";
 @import "injectable/card";
+@import "injectable/flights_on_card";
 
-$gap-h: 40px;
+$gap-h: 30px;
 $gap-v: 15px;
 
 :host {
@@ -17,54 +18,8 @@ $gap-v: 15px;
 }
 .flights {
   &__item {
+    @extend %flights;
     padding: $gap-v $gap-h $gap-v/2;
-    display: flex;
-    flex-wrap: wrap;
-
-    .airline,
-    .date,
-    .info {
-      flex-shrink: 0;
-      margin-right: $gap-h/2;
-      &:last-child {
-        margin-right: 0;
-      }
-      margin-bottom: $gap-v/2;
-    }
-    .airline {
-      &__logo {
-        width: 50px;
-        height: 50px;
-        object-fit: contain;
-        vertical-align: top;
-        display: inline-block;
-      }
-      &__name {
-        @include text-overflow();
-        width: 100px;
-        padding-left: $gap-h/4;
-        display: inline-block;
-        color: $color-grey;
-      }
-    }
-    .date {
-      &__time {
-        font-weight: bold;
-        font-size: 1.2rem;
-      }
-      &__date {
-        color: $color-grey;
-      }
-    }
-    .info {
-      &__duration {
-        font-weight: bold;
-        font-size: 1.2rem;
-      }
-      &__places {
-        color: $color-grey;
-      }
-    }
   }
 }
 
@@ -85,7 +40,7 @@ $gap-v: 15px;
     border-top: 0px solid;
     border-left: 1px solid $color-blue;
   }
-  span {
+  .price {
     margin-bottom: 10px;
     font-weight: bold;
     font-size: 1.5rem;

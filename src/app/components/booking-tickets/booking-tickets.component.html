@@ -2,27 +2,30 @@
 <ng-container *ngFor="let flight of bookedFlight.flights">
   <div class="flight-card">
 
-    <div class="totalInfo">
+    <div class="totalInfo" *ngFor="let flight of bookedFlight.flights; index as i">
+      <div class="airline">
+        <img class="airline__logo" src="assets/images/{{flight.provider.logo}}" alt="{{flight.provider.name}} logo">
+        <div class="airline__name">{{flight.provider.name}}</div>
+      </div>
+      <div class="date">
+        <div class="date__time">
+          {{flight.departure.time}} - {{flight.arrival.time}}
+        </div>
+        <div class="date__date">
+          {{flight.date}}
+        </div>
+      </div>
+      <div class="info">
+        <div class="info__duration">5h. 30 min</div>
+        <div class="info__places">
+          {{flight.departure.city}} (KBP) ---> {{flight.arrival.city}} (KBP)
+        </div>
+      </div>
+    </div>
 
-      <div class="provider">
-        <img class="provider__image" src="assets/images/{{flight.provider.logo}}" alt="{{flight.provider.name}}">
-        {{flight.provider.name}}
-      </div>
-      <div class="flight-time">
-        {{flight.departure.time}} - {{flight.arrival.time}}
-        <br>
-        {{flight.date.time}}
-      </div>
-      <div class="flight-info">
-        <!-- {{flight.duration}} -->
-        7h. 30 min
-        <br>
-        {{flight.departure.city}} - {{flight.arrival.city}}
-      </div>
-      <div class="price">
-        <!-- {{flight.price}} -->
-        123$
-      </div>
+    <div class="price">
+      <!-- {{flight.price}} -->
+      123$
     </div>
 
     <ul class="actualFlights">
