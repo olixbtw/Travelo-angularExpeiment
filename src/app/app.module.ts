@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { CalendarModule } from 'primeng/calendar';
@@ -34,6 +35,9 @@ import { SortService } from '@services/sort.service';
 import { UsersService } from '@services/users.service';
 import { FlightPaymentComponent } from './flight-payment/flight-payment.component';
 
+import { FlightsFilterComponent } from './components/flights-filter/flights-filter.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,8 +60,9 @@ import { FlightPaymentComponent } from './flight-payment/flight-payment.componen
     MyTripsItemComponent,
     FlightPaymentComponent,
     BookingTicketsComponent,
+    FlightsFilterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, CalendarModule, BrowserAnimationsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, CalendarModule, BrowserAnimationsModule],
   providers: [FlightsService, FilterService, SortService, UsersService],
   bootstrap: [AppComponent],
 })
