@@ -1,0 +1,56 @@
+@import "../mixins";
+
+$gap-h: 40px;
+$gap-v: 15px;
+%flights {
+  padding: 0;
+  display: flex;
+  @include xlg {
+    flex-wrap: wrap;
+  }
+
+  .airline,
+  .date,
+  .info {
+    flex-shrink: 0;
+    margin-right: $gap-h/7 * 3;
+    &:last-child {
+      margin-right: 0;
+    }
+    margin-bottom: $gap-v/2;
+  }
+  .airline {
+    &__logo {
+      width: $gap-h/4 * 5;
+      height: $gap-h/4 * 5;
+      object-fit: contain;
+      vertical-align: top;
+      display: inline-block;
+    }
+    &__name {
+      @include text-overflow();
+      width: $gap-h * 7/3;
+      padding-left: $gap-h/3;
+      display: inline-block;
+      color: $color-grey;
+    }
+  }
+  .date {
+    &__time {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    &__date {
+      color: $color-grey;
+    }
+  }
+  .info {
+    &__duration {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    &__places {
+      color: $color-grey;
+    }
+  }
+}

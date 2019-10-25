@@ -1,13 +1,9 @@
 @import "vars";
 @import "mixins";
+@import "injectable/card";
 $gap: 30px;
-
 :host {
-  display: block;
-  padding: $gap;
-  border-radius: $gap/2;
-  background: $color-white;
-  box-shadow: 2px 4px 20px rgba($color-text, 0.2);
+  @extend %card;
 }
 
 .tripId {

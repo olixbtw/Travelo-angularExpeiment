@@ -1,31 +1,27 @@
-<div class="card">
-
-  <ul class="flights">
-    <li class="flights__item" *ngFor="let flight of tripData.flights; index as i">
-      <div class="airline">
-        <img class="airline__logo"src="assets/images/{{flight.provider.logo}}" alt="{{flight.provider.name}} logo">
-        <div class="airline__name">{{flight.provider.name}}</div>
+<ul class="flights">
+  <li class="flights__item" *ngFor="let flight of tripData.flights; index as i">
+    <div class="airline">
+      <img class="airline__logo" src="assets/images/{{flight.provider.logo}}" alt="{{flight.provider.name}} logo">
+      <div class="airline__name">{{flight.provider.name}}</div>
+    </div>
+    <div class="date">
+      <div class="date__time">
+        {{flight.departure.time}} - {{flight.arrival.time}}
       </div>
-      <div class="date">
-        <div class="date__time">
-          {{flight.departure.time}} - {{flight.arrival.time}}
-        </div>
-        <div class="date__date">
-            {{flight.date}}
-        </div>
+      <div class="date__date">
+        {{flight.date}}
       </div>
-      <div class="info">
-        <div class="info__duration">5h. 30 min</div>
-        <div class="info__places">
-          {{flight.departure.city}} (KBP) ---> {{flight.arrival.city}} (KBP)
-        </div>
+    </div>
+    <div class="info">
+      <div class="info__duration">5h. 30 min</div>
+      <div class="info__places">
+        {{flight.departure.city}} (KBP) ---> {{flight.arrival.city}} (KBP)
       </div>
-    </li>
-  </ul>
+    </div>
+  </li>
+</ul>
 
-  <div class="book_result">
-    <span>{{tripData.totalCost}}</span>
-    <button class="btn">Book</button>
-  </div>
-
+<div class="book_result">
+  <span class="price">{{tripData.totalCost}}</span>
+  <button class="btn" (click)="sendResult(tripData)">Book</button>
 </div>

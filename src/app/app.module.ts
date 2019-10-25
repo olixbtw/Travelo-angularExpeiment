@@ -12,8 +12,8 @@ import { FlightsComponent } from '@routes/flights/flights.component';
 import { TripsComponent } from '@routes/trips/trips.component';
 import { ErrorPathComponent } from '@routes/errorPath/errorPath.component';
 
-import { HeaderComponent } from '@routes/home-page/header/header.component';
-import { FooterComponent } from '@routes/home-page/footer/footer.component';
+import { HeaderComponent } from '@components/layout/header/header.component';
+import { FooterComponent } from '@components/layout/footer/footer.component';
 import { FlightSearchComponent } from '@components/flight-search-main/flight-search.component';
 import { PopularDestinationsComponent } from '@components/homepageSection-popular-destinations/popular-destinations.component';
 import { DestinationComponent } from '@components/homepageSection-popular-destinations/destination/destination.component';
@@ -24,8 +24,9 @@ import { FormUserInfoComponent } from '@components/booking-form-user-info/form-u
 import { FlightSearchResultListComponent } from '@components/flight-search-result-list/flight-search-result-list.component';
 // tslint:disable-next-line: max-line-length
 import { FlightSearchResultListItemComponent } from '@components/flight-search-result-list/flight-search-result-list-item/flight-search-result-list-item.component';
-import { FlightsSortComponent } from './components/flights-sort/flights-sort.component';
-import { MyTripsItemComponent } from './components/my-trips-item/my-trips-item.component';
+import { FlightsSortComponent } from '@components/flights-sort/flights-sort.component';
+import { MyTripsItemComponent } from '@components/my-trips-item/my-trips-item.component';
+import { BookingTicketsComponent } from '@components/booking-tickets/booking-tickets.component';
 
 import { FlightsService } from '@services/flights.service';
 import { FilterService } from '@services/filter.service';
@@ -54,6 +55,7 @@ import { FlightPaymentComponent } from './flight-payment/flight-payment.componen
     FlightsSortComponent,
     MyTripsItemComponent,
     FlightPaymentComponent,
+    BookingTicketsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, CalendarModule, BrowserAnimationsModule],
   providers: [FlightsService, FilterService, SortService, UsersService],

@@ -14,4 +14,8 @@ export class FlightSearchResultListItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  sendResult(flight) {
+    console.log(flight);
+  }
+
 }

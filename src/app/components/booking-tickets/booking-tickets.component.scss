@@ -1,0 +1,84 @@
+@import "vars";
+@import "mixins";
+@import "injectable/card";
+@import "injectable/flights_on_card";
+
+$gap: 45px;
+
+.flight-card {
+  @extend %card;
+  padding: $gap;
+  margin-bottom: 30px;
+  position: relative;
+  .price {
+    position: absolute;
+    top: $gap * 5/4;
+    right: $gap * 3 / 2;
+    transform: translateX(50%) translateY(-50%);
+
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: $color-blue;
+  }
+  padding-right: $gap * 2;
+}
+
+.totalInfo {
+  @extend %flights;
+
+  .airline {
+    &__logo {
+      width: $gap/7 * 6;
+      height: $gap/7 * 6;
+    }
+  }
+  .airline,
+  .date,
+  .info {
+    margin-right: $gap * 3/2;
+  }
+}
+
+.actualFlights {
+  position: relative;
+  padding-left: $gap;
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: $gap/2;
+    height: $gap/2;
+    content: "";
+    background: url("/assets/ui/calendar.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  margin-top: $gap/2;
+  display: flex;
+  // justify-content: space-between;
+
+  .dep {
+    margin-right: $gap;
+  }
+  .arr,
+  .dep {
+    // width: 50%;
+    display: flex;
+
+    .city,
+    .code {
+      font-weight: bold;
+      // font-size: 1.2rem;
+      margin-right: $gap/10;
+    }
+
+    .time,
+    .date {
+      margin-right: $gap/10;
+      color: $color-grey;
+    }
+  }
+}
