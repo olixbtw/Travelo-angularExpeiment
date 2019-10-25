@@ -1,4 +1,5 @@
 @import "vars";
+@import "mixins";
 
 .payment-section {
   margin: 100px auto;
@@ -48,9 +49,15 @@
 .info-icon {
   width: 17px;
   height: 17px;
+  @include md {
+    display: none;
+  }
 }
 
 .card-image {
+  @include md {
+    display: none;
+  }
   width: 225px;
   height: 145px;
   border: 1px solid $color-blue;
@@ -85,8 +92,8 @@
 }
 
 #agreement {
-    zoom: 1.6;
-    margin-right: 5px;
+  zoom: 1.6;
+  margin-right: 5px;
 }
 
 .checkbox-container {
@@ -94,7 +101,6 @@
   align-items: center;
   margin-top: 30px;
   margin-bottom: 40px;
-  
 
   .checkbox-text {
     font-size: 12px;
@@ -104,8 +110,4 @@
       text-decoration: underline;
     }
   }
-}
-
-.btn {
-  background-color: rgba(0,0,255,0.5);
 }
