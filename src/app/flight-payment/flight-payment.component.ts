@@ -17,10 +17,12 @@ export class FlightPaymentComponent implements OnInit {
   });
 
 
-  constructor() { }
-
-  ngOnInit() {
+  getPaymentData() {
+    console.log(this.cardForm.value);
   }
 
+  constructor() { }
+
+  ngOnInit() { }
 
 }

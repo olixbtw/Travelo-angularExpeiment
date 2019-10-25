@@ -42,14 +42,14 @@
                 </div>
             </div>
         </div>
-        <div class="checbox-container">
+        <div class="checkbox-container">
             <input type="checkbox" value="true" name="agreement" id="agreement">
-            <div class="checbox-text">
+            <div class="checkbox-text">
                 <label for="agreement">I agree with </label>
-                <a>Terms & Conditions</a>
+                <a routerLink="err">Terms & Conditions</a>
             </div>
         </div>
 
-        <button class="btn">Pay</button>
+        <button class="btn" (click)="getPaymentData()">Pay</button>
     </div>
 </section>
