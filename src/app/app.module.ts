@@ -33,9 +33,9 @@ import { FlightsService } from '@services/flights.service';
 import { FilterService } from '@services/filter.service';
 import { SortService } from '@services/sort.service';
 import { UsersService } from '@services/users.service';
-import { FlightPaymentComponent } from './flight-payment/flight-payment.component';
 
-import { FlightsFilterComponent } from './components/flights-filter/flights-filter.component';
+import { FlightPaymentComponent } from '@components/booking-form-payment/flight-payment.component';
+import { FlightsFilterComponent } from '@components/flights-filter/flights-filter.component';
 
 
 @NgModule({
