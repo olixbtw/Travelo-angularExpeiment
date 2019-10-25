@@ -11,11 +11,11 @@
     height: 100%;
 
     @include m-md {
-      &:first-child{width: 30%;padding-right:30px;text-align: right;}
+      &:first-child{width: 30%;padding-right:30px;}
       &:last-child{width: 70%;}
     }
     @include m-xlg {
-      &:first-child{width: 32%;padding-right:70px;text-align: right;}
+      &:first-child{width: 32%;padding-right:70px;}
       &:last-child{width: 68%;}
     }
     // @include m-xlg {
