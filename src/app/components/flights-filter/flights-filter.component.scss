@@ -4,7 +4,15 @@
 	width: 100%;
 
 	&__results {
+		font-size: 17px
+	}
 
+	&__results-header {
+
+	}
+
+	&__results-value {
+		font-weight: bold;
 	}
 
 	&__price {

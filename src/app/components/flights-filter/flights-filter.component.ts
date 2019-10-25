@@ -13,8 +13,8 @@ export class FlightsFilterComponent implements OnInit {
   public minRange = 0;
   public maxRange = 200;
 
-  public minValue = this.minRange;
-  public maxValue = this.maxRange;
+  public minRangeValue = this.minRange;
+  public maxRangeValue = this.maxRange;
 
   public minDuration = 1;
   public maxDuration = 14;

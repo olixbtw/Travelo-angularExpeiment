@@ -1,7 +1,7 @@
 <div class="flights-filter">
 	<div class="flights-filter__results">
-		<p>Total results:</p>
-		<span>{{totalResults}}</span>
+		<p class="flights-filter__results-header">Total results:</p>
+		<span class="flights-filter__results-value">{{totalResults}}</span>
 	</div>
 
 	<div class="flights-filter__price">
@@ -11,22 +11,22 @@
 				step="1" type="range"
 				min="{{minRange}}" 
 				max="{{maxRange}}" 
-				[value]="minValue"
-				[(ngModel)]="minValue"
+				[value]="minRangeValue"
+				[(ngModel)]="minRangeValue"
 			/>
 			<input 
 				min="{{minRange}}" 
 				max="{{maxRange}}" 
 				step="1" type="range"
-				[value]="maxValue" 
-				[(ngModel)]="maxValue"
+				[value]="maxRangeValue" 
+				[(ngModel)]="maxRangeValue"
 			/>
 		</section>
-		<span *ngIf="minValue < maxValue" class="valueFrom">${{minValue}}</span>
-		<span *ngIf="minValue >= maxValue" class="valueTo">${{maxValue}}</span>
+		<span *ngIf="minRangeValue < maxRangeValue" class="valueFrom value-left">${{minRangeValue}}</span>
+		<span *ngIf="minRangeValue >= maxRangeValue" class="valueTo value-left">${{maxRangeValue}}</span>
 		<hr/>
-		<span *ngIf="minValue >= maxValue" class="valueFrom">${{minValue}}</span>
-		<span *ngIf="minValue < maxValue" class="valueTo">${{maxValue}}</span>
+		<span *ngIf="minRangeValue >= maxRangeValue" class="valueFrom value-right">${{minRangeValue}}</span>
+		<span *ngIf="minRangeValue < maxRangeValue" class="valueTo value-right">${{maxRangeValue}}</span>
 	</div>
 
 
