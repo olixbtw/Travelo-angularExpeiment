@@ -49,12 +49,11 @@
           </div>
         </div>
       </div>
-      <div class="checkbox-container">
+      <div class="checkbox">
         <input type="checkbox" value="true" name="agreement" id="agreement">
-        <div class="checkbox-text">
-          <label for="agreement">I agree with </label>
-          <a routerLink="err">Terms & Conditions</a>
-        </div>
+        <label for="agreement" class="checkbox-text">
+          I agree with<a routerLink="err">Terms & Conditions</a>
+        </label>
       </div>
 
       <button class="btn" (click)="getPaymentData()">Pay</button>
