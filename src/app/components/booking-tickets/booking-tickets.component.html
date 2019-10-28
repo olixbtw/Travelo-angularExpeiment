@@ -18,7 +18,9 @@
       <div class="info">
         <div class="info__duration">5h. 30 min</div>
         <div class="info__places">
-          {{flight.departure.city}} (KBP) ---> {{flight.arrival.city}} (KBP)
+          {{flight.departure.city}} (KBP)
+          <app-arrow-intermediate-flights></app-arrow-intermediate-flights>
+          {{flight.arrival.city}} (KBP)
         </div>
       </div>
     </div>
@@ -35,6 +37,7 @@
         <div class="time">12:45,</div>
         <div class="date">Sep 21</div>
       </div>
+      <app-arrow-intermediate-flights></app-arrow-intermediate-flights>
       <div class="arr">
         <div class="city">City</div>
         <div class="code">(CTY)</div>

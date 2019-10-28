@@ -34,6 +34,7 @@ import { FlightsSortComponent } from '@components/flights-sort/flights-sort.comp
 import { MyTripsItemComponent } from '@components/my-trips-item/my-trips-item.component';
 import { BookingTicketsComponent } from '@components/booking-tickets/booking-tickets.component';
 import { FlightsFilterComponent } from '@components/flights-filter/flights-filter.component';
+import { ArrowIntermediateFlightsComponent } from './components/arrow-intermediate-flights/arrow-intermediate-flights.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { FlightsFilterComponent } from '@components/flights-filter/flights-filte
     BookingComponent,
     PaymentComponent,
     ResultsComponent,
+    ArrowIntermediateFlightsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [FlightsService, FilterService, SortService, UsersService],
