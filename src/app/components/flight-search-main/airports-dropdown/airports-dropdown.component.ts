@@ -12,9 +12,9 @@ export class AirportsDropdownComponent implements OnInit, OnChanges {
   objectKeys = Object.keys;
   formattedAirports;
 
-  constructor(private airportsService: AirportsService) {}
+  constructor(private airportsService: AirportsService) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   ngOnChanges(changes: SimpleChanges) {
     this.formattedAirports = { ...this.groupAirportsByCity() };
