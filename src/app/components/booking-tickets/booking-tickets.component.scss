@@ -62,7 +62,11 @@ $gap: 45px;
   // justify-content: space-between;
 
   .dep {
-    margin-right: $gap;
+    // margin-right: $gap;
+  }
+  app-arrow-intermediate-flights{
+    margin-left: $gap/3;
+    margin-right: $gap/3;
   }
   .arr,
   .dep {

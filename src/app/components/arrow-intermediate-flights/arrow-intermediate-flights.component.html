@@ -1,1 +1,6 @@
--->
+<div class="arrow"></div>
+<div class="stops" *ngIf="stopsQty">
+  {{stopsQty}} stop{{stopsQty>1?'s':''}}
+
+  <div class="time" *ngIf="stopsTime">{{stopsTime}}</div>
+</div>
