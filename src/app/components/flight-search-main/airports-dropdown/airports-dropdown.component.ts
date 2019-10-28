@@ -1,5 +1,5 @@
 import { AirportsService } from '@services/airports.service';
-import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-airports-dropdown',
@@ -8,6 +8,7 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/cor
 })
 export class AirportsDropdownComponent implements OnInit, OnChanges {
   @Input() airports = [];
+  @Output() airport = new EventEmitter();
   objectKeys = Object.keys;
   formattedAirports;
 
@@ -17,6 +18,16 @@ export class AirportsDropdownComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     this.formattedAirports = { ...this.groupAirportsByCity() };
+  }
+
+  onCityClick(e: MouseEvent, cityIATACode: string) {
+    e.preventDefault();
+    this.airport.emit(`${this.airportsService.getCityNameByIATACode(cityIATACode)} (All airports)`);
+  }
+
+  onAirportClick(e: MouseEvent, airport) {
+    e.preventDefault();
+    this.airport.emit(`${this.airportsService.getCityNameByIATACode(airport.city_code)} (${airport.code})`);
   }
 
   private groupAirportsByCity() {

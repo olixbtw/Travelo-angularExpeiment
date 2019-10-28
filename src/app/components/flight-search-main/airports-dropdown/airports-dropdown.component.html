@@ -1,8 +1,12 @@
 <ul *ngIf="formattedAirports">
   <li *ngFor="let cityIATACode of objectKeys(formattedAirports)">
-    {{ airportsService.getCityNameByIATACode(cityIATACode) }} ({{ cityIATACode }})
+    <span (click)="onCityClick($event, cityIATACode)"
+      >{{ airportsService.getCityNameByIATACode(cityIATACode) }} ({{ cityIATACode }})</span
+    >
     <ul class="innerList">
-      <li *ngFor="let airport of formattedAirports[cityIATACode]">{{ airport.name }} ({{ airport.code }})</li>
+      <li *ngFor="let airport of formattedAirports[cityIATACode]" (click)="onAirportClick($event, airport)">
+        {{ airport.name }} ({{ airport.code }})
+      </li>
     </ul>
   </li>
 </ul>

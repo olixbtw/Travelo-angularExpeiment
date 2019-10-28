@@ -13,7 +13,7 @@ export class FlightSearchComponent implements OnInit {
   searchForm = new FormGroup({
     departure: new FormControl('', Validators.required),
     destination: new FormControl('', Validators.required),
-    tripType: new FormControl('return', Validators.required),
+    tripType: new FormControl('oneWay', Validators.required),
     dates: new FormControl('', Validators.required),
     passengers: new FormControl('', Validators.required),
   });
@@ -28,8 +28,10 @@ export class FlightSearchComponent implements OnInit {
     private airportsService: AirportsService
   ) {}
 
-  ngOnInit() {
-    console.log(this.searchForm);
+  ngOnInit() {}
+
+  onAirportPicked(airport: string, inputName: string) {
+    this.searchForm.controls[inputName].setValue(airport.trim());
   }
 
   onFlightInputChange(e: KeyboardEvent) {

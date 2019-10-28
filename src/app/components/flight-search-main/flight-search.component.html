@@ -25,6 +25,7 @@
         <input
           class="section-inputs__item___input formcontrol"
           type="text"
+          (input)="onFlightInputChange($event)"
           placeholder="Kyiv (KBP)"
           formControlName="departure"
         />
@@ -36,6 +37,7 @@
         <app-airports-dropdown
           *ngIf="searchForm.value.departure.length >= 3"
           [airports]="departureAirports"
+          (airport)="onAirportPicked($event, 'departure')"
         ></app-airports-dropdown>
       </label>
       <label class="section-inputs__item">
@@ -43,12 +45,14 @@
         <input
           class="section-inputs__item___input formcontrol"
           type="text"
+          (input)="onFlightInputChange($event)"
           placeholder="Paris (CDG)"
           formControlName="destination"
         />
         <app-airports-dropdown
           *ngIf="searchForm.value.destination.length >= 3"
           [airports]="destinationAirports"
+          (airport)="onAirportPicked($event, 'destination')"
         ></app-airports-dropdown>
       </label>
     </div>
