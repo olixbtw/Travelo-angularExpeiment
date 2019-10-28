@@ -17,12 +17,14 @@ $gap: 20px;
   flex-wrap: wrap;
   margin-bottom: $gap;
   &__item {
-    margin-left: $gap/10;
     margin-right: $gap;
     @include sm {
       margin: $gap/5 auto;
     }
-    @include m-sm {
+  }
+  @include m-sm {
+    padding-left: $gap/2;
+    &__item {
       &:last-child {
         margin-right: 0;
       }
@@ -55,6 +57,10 @@ $gap: 20px;
         &::-webkit-inner-spin-button {
           display: none;
         }
+        &::-webkit-datetime-edit-text { color: $color-grey; padding: 0; }
+        &::-webkit-datetime-edit-month-field { color: $color-grey; }
+        &::-webkit-datetime-edit-day-field { color: $color-grey; }
+        &::-webkit-datetime-edit-year-field { color: $color-grey; }
       }
     }
     &___icon {
@@ -128,6 +134,7 @@ $gap: 20px;
   }
 
   &__btn {
+    border-radius: 4px;
     @include m-sm() {
       @include lg() {
         width: 100%;
