@@ -1,16 +1,16 @@
 <form class="form" [formGroup]="searchForm">
   <div class="form__inline">
-    <label>
+    <label class="radio">
       <input type="radio" formControlName="tripType" value="return" />
-      Return
+      <span>Return</span>
     </label>
-    <label>
+    <label class="radio">
       <input type="radio" formControlName="tripType" value="oneWay" />
-      One way
+      <span>One way</span>
     </label>
-    <label>
+    <label class="radio">
       <input type="radio" formControlName="tripType" value="multiTrip" />
-      Multi-trip
+      <span>Multi-trip</span>
     </label>
   </div>
   <div class="form__inline">

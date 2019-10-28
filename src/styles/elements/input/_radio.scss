@@ -1,0 +1,88 @@
+/* Base for label styling */
+/* use input inside a label with class "radio" + any element as a placeholder inside */
+
+$size: 22px;
+
+.radio [type="radio"]:not(:checked),
+.radio [type="radio"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+.radio [type="radio"]:not(:checked) + *,
+.radio [type="radio"]:checked + * {
+  position: relative;
+  padding-left: 32px;
+  cursor: pointer;
+  // margin-bottom: 4px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/* radio aspect */
+.radio [type="radio"]:not(:checked) + *:before,
+.radio [type="radio"]:checked + *:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  box-shadow: inset 0 1px 3px rgba($color-text, 0.1);
+  box-sizing: border-box;
+  border: $size/4.5 solid $color-blue;
+  background: $color-white;
+  transition: all 0.15s ease-in-out;
+}
+
+.radio [type="radio"]:not(:checked) + *:hover:before {
+  border-color: $color-blue;
+  background: $color-white;
+}
+.radio [type="radio"]:checked + *:hover:before {
+  border-color: rgba($color-white, 0.1);
+}
+
+.radio [type="radio"]:not(:checked) + *:before {
+  border-color: $color-grey;
+}
+.radio [type="radio"]:checked + *:before {
+  border-color: rgba($color-white, 0.5);
+  background-color: $color-blue;
+}
+
+/* checked mark aspect */
+.radio [type="radio"]:not(:checked) + *:after,
+.radio [type="radio"]:checked + *:after {
+  // content: "✔";
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  font-size: 20px;
+  line-height: 1.2;
+  color: $color-blue;
+  transition: all 0.2s;
+}
+
+/* checked mark aspect changes */
+.radio [type="radio"]:not(:checked) + *:after {
+  display: none;
+}
+.radio [type="radio"]:checked + *:after {
+  display: block;
+}
+
+/* disabled radio */
+.radio [type="radio"]:disabled:not(:checked) + *:before,
+.radio [type="radio"]:disabled:checked + *:before {
+  box-shadow: none;
+  border-color: $color-grey;
+  background-color: $color-white;
+}
+
+.radio [type="radio"]:disabled:checked + *:after,
+.radio [type="radio"]:disabled + * {
+  color: $color-grey;
+}
