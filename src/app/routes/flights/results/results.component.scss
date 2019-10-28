@@ -1,8 +1,8 @@
-@import 'mixins';
+@import "mixins";
 
+$gap: 50px;
 .two-columns {
-
-  margin: 50px 0;
+  margin: $gap 0;
   @include m-md {
     display: flex;
   }
@@ -11,16 +11,22 @@
     height: 100%;
 
     @include m-md {
-      &:first-child{width: 30%;padding-right:30px;}
-      &:last-child{width: 70%;}
+      &:first-child {
+        padding-right: $gap/5 * 3;
+        width: 30%;
+      }
+      &:last-child {
+        width: 70%;
+      }
     }
     @include m-xlg {
-      &:first-child{width: 32%;padding-right:70px;}
-      &:last-child{width: 68%;}
+      &:first-child {
+        padding-right: $gap;
+        width: 25%;
+      }
+      &:last-child {
+        width: 75%;
+      }
     }
-    // @include m-xlg {
-    //   &:first-child{width: 35%;padding-right:100px;text-align: right;}
-    //   &:last-child{width: 65%;}
-    // }
   }
 }

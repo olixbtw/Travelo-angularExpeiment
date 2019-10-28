@@ -1,0 +1,74 @@
+@import "vars";
+
+$thickness: 2px;
+:host {
+  display: inline-block;
+  height: 16px;
+  padding-left: 2px;
+  padding-right: 2px;
+  position: relative;
+
+  &.active {
+    transform: translateY(-6px);
+    &::after {
+      position: absolute;
+      content: "";
+      background: $color-orange;
+      width: $thickness * 5;
+      height: $thickness * 5;
+      left: 50%;
+      top: 60%;
+      border-radius: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+}
+.arrow {
+  $deg: 30deg;
+
+  width: $thickness * 30;
+  height: $thickness;
+  background: $color-grey;
+  position: relative;
+  top: 60%;
+  opacity: 0.75;
+  transform: translateY(-50%);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background: $color-grey;
+    width: $thickness * 5;
+    height: $thickness;
+    top: 50%;
+    right: 0;
+  }
+  &::before {
+    transform-origin: 96% 0 0;
+    transform: translateY(-50%) rotate(-$deg);
+  }
+  &::after {
+    transform-origin: 96% 100% 0;
+    transform: translateY(-50%) rotate($deg);
+  }
+  :host.active & {
+    background-color: $color-orange;
+    &::before,
+    &::after {
+      background-color: $color-orange;
+    }
+  }
+}
+
+.stops {
+  color: $color-grey;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  text-align: center;
+}
