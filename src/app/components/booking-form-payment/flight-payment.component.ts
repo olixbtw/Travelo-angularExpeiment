@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-flight-payment',
@@ -17,11 +17,15 @@ export class FlightPaymentComponent implements OnInit {
   });
 
 
-  getPaymentData() {
+  submitPayment() {
     console.log(this.cardForm.value);
+    this.router.navigate(['./trips']);
   }
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+  ) { }
 
   ngOnInit() { }
 

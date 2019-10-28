@@ -36,6 +36,9 @@ import { UsersService } from '@services/users.service';
 
 import { FlightPaymentComponent } from '@components/booking-form-payment/flight-payment.component';
 import { FlightsFilterComponent } from '@components/flights-filter/flights-filter.component';
+import { BookingComponent } from './routes/flights/booking/booking.component';
+import { PaymentComponent } from './routes/flights/payment/payment.component';
+import { ResultsComponent } from './routes/flights/results/results.component';
 
 
 @NgModule({
@@ -61,6 +64,9 @@ import { FlightsFilterComponent } from '@components/flights-filter/flights-filte
     FlightPaymentComponent,
     BookingTicketsComponent,
     FlightsFilterComponent,
+    BookingComponent,
+    PaymentComponent,
+    ResultsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, CalendarModule, BrowserAnimationsModule],
   providers: [FlightsService, FilterService, SortService, UsersService],

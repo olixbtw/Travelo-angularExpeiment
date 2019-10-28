@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-form-user-info',
@@ -17,7 +18,15 @@ export class FormUserInfoComponent implements OnInit {
     expirydate: new FormControl(),
     luggage: new FormControl(),
   });
-  constructor() {}
 
-  ngOnInit() {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+  ) { }
+
+  submitUserInfo() {
+    this.router.navigate(['./payment'], { relativeTo: this.route });
+  }
+
+  ngOnInit() { }
 }
