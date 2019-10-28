@@ -2,12 +2,13 @@
 
 $gap: 50px;
 .two-columns {
-  margin: $gap 0;
   @include m-md {
     display: flex;
   }
 
   .col {
+    margin-top: $gap;
+    margin-bottom: $gap;
     height: 100%;
 
     @include m-md {

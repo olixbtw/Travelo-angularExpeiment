@@ -7,24 +7,24 @@
 	<div class="flights-filter__price">
 		Price:
 		<section class="range-slider">
-			<input 
+			<input
 				step="1" type="range"
-				min="{{minRange}}" 
-				max="{{maxRange}}" 
+				min="{{minRange}}"
+				max="{{maxRange}}"
 				[value]="minRangeValue"
 				[(ngModel)]="minRangeValue"
 			/>
-			<input 
-				min="{{minRange}}" 
-				max="{{maxRange}}" 
+			<input
+				min="{{minRange}}"
+				max="{{maxRange}}"
 				step="1" type="range"
-				[value]="maxRangeValue" 
+				[value]="maxRangeValue"
 				[(ngModel)]="maxRangeValue"
 			/>
 		</section>
 		<span *ngIf="minRangeValue < maxRangeValue" class="valueFrom value-left">${{minRangeValue}}</span>
 		<span *ngIf="minRangeValue >= maxRangeValue" class="valueTo value-left">${{maxRangeValue}}</span>
-		<hr/>
+
 		<span *ngIf="minRangeValue >= maxRangeValue" class="valueFrom value-right">${{minRangeValue}}</span>
 		<span *ngIf="minRangeValue < maxRangeValue" class="valueTo value-right">${{maxRangeValue}}</span>
 	</div>
@@ -35,24 +35,24 @@
 	<div class="flights-filter__duration">
 		Duration:
 		<section class="range-slider">
-			<input 
+			<input
 				step="1" type="range"
-				min="{{minDuration}}" 
-				max="{{maxDuration}}" 
+				min="{{minDuration}}"
+				max="{{maxDuration}}"
 				[value]="minDurValue"
 				[(ngModel)]="minDurValue"
 			/>
-			<input 
-				min="{{minDuration}}" 
-				max="{{maxDuration}}" 
+			<input
+				min="{{minDuration}}"
+				max="{{maxDuration}}"
 				step="1" type="range"
-				[value]="maxDurValue" 
+				[value]="maxDurValue"
 				[(ngModel)]="maxDurValue"
 			/>
 		</section>
 		<span *ngIf="minDurValue < maxDurValue" class="valueFrom">${{minDurValue}}h.</span>
 		<span *ngIf="minDurValue >= maxDurValue" class="valueTo">${{maxDurValue}}h.</span>
-		<hr/>
+
 		<span *ngIf="minDurValue >= maxDurValue" class="valueFrom">${{minDurValue}}h.</span>
 		<span *ngIf="minDurValue < maxDurValue" class="valueTo">${{maxDurValue}}h.</span>
 	</div>
