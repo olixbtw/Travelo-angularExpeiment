@@ -1,47 +1,51 @@
 <form class="form" [formGroup]="searchForm">
-  <div class="form__inline">
-    <label class="radio">
-      <input type="radio" formControlName="tripType" value="return" />
+  <div class="section-radios">
+    <label class="section-radios__item radio">
+      <input class="section-inputs__item___input formcontrol" type="radio" formControlName="tripType" value="return" />
       <span>Return</span>
     </label>
-    <label class="radio">
-      <input type="radio" formControlName="tripType" value="oneWay" />
+    <label class="section-radios__item radio">
+      <input class="section-inputs__item___input formcontrol" type="radio" formControlName="tripType" value="oneWay" />
       <span>One way</span>
     </label>
-    <label class="radio">
-      <input type="radio" formControlName="tripType" value="multiTrip" />
+    <label class="section-radios__item radio">
+      <input class="section-inputs__item___input formcontrol" type="radio" formControlName="tripType"
+        value="multiTrip" />
       <span>Multi-trip</span>
     </label>
   </div>
-  <div class="form__inline">
-    <label class="form-icon form-icon--left">
-      <img src="assets/ui/plane_to.svg" alt="departure" />
-      <input type="text" class="formcontrol formcontrol--left" placeholder="Kyiv (KBP)" formControlName="departure" />
-    </label>
-    <label class="form-icon form-icon--right">
-      <img src="assets/ui/backnforce.svg" alt="" />
-    </label>
-    <label class="form-icon form-icon--left">
-      <img src="assets/ui/plane_back.svg" alt="destination" />
-      <input
-        type="text"
-        class="formcontrol formcontrol--right"
-        placeholder="Paris (CDG)"
-        formControlName="destination"
-      />
-    </label>
-    <label class="form-icon form-icon--left">
-      <img src="assets/ui/calendar.svg" alt="dates" />
-      <input type="date" class="formcontrol" formControlName="dates" />
-    </label>
-    <label class="form-icon form-icon--left">
-      <img src="assets/ui/calendar.svg" alt="dates" />
-      <input type="date" class="formcontrol" formControlName="dates" />
-    </label>
-    <label class="form-icon form-icon--left">
-      <img src="assets/ui/profile.svg" alt="passengers" />
-      <input type="number" class="formcontrol" placeholder="1 passenger" formControlName="passengers" />
-    </label>
-    <button class="btn" (click)="onSubmit($event)">Search</button>
+  <div class="section-inputs">
+    <div class="section-inputs__group section-inputs__group--cities">
+
+      <label class="section-inputs__item">
+        <img class="section-inputs__item___icon" src="assets/ui/plane_to.svg" alt="departure" />
+        <input class="section-inputs__item___input formcontrol" type="text" placeholder="Kyiv (KBP)"
+          formControlName="departure" />
+        <img class="section-inputs__item___icon section-inputs__item___icon--right" src="assets/ui/backnforce.svg"
+          alt="" />
+      </label>
+      <label class="section-inputs__item">
+        <img class="section-inputs__item___icon" src="assets/ui/plane_back.svg" alt="destination" />
+        <input class="section-inputs__item___input formcontrol" type="text" placeholder="Paris (CDG)"
+          formControlName="destination" />
+      </label>
+
+    </div>
+
+    <div class="section-inputs__group section-inputs__group--dates_n_ppl">
+
+      <label class="section-inputs__item">
+        <img class="section-inputs__item___icon" src="assets/ui/calendar.svg" alt="dates" />
+        <input class="section-inputs__item___input formcontrol" type="date" formControlName="dates" />
+      </label>
+      <label class="section-inputs__item section-inputs__item--people">
+        <img class="section-inputs__item___icon" src="assets/ui/profile.svg" alt="passengers" />
+        <input class="section-inputs__item___input formcontrol" type="number" placeholder="1 passenger"
+          formControlName="passengers" />
+      </label>
+
+    </div>
+
+    <button class="section-inputs__btn btn" (click)="onSubmit($event)">Search</button>
   </div>
 </form>

@@ -1,51 +1,139 @@
 @import "vars";
+@import "mixins";
+$gap: 20px;
 
 .form {
   color: $color-blue;
   background-color: rgba($color-white, 0.95);
   box-shadow: 0 0 5px rgba($color-text, 0.3);
-  padding: 25px 20px;
-  border-radius: 3px;
-  font-size: 14px;
+  padding: $gap;
+  border-radius: $gap/5;
+  // font-size: 16px;
   font-weight: 600;
+}
 
-  &__inline {
-    display: flex;
-    flex-direction: row;
-
-    &:not(:last-of-type) {
-      margin-bottom: 15px;
+.section-radios {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: $gap;
+  &__item {
+    margin-left: $gap/10;
+    margin-right: $gap;
+    @include sm {
+      margin: $gap/5 auto;
     }
-
-    input[type="radio"] {
-      margin-left: 30px;
-      margin-right: 2px;
+    @include m-sm {
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
 
-.form-icon {
+.section-inputs {
+  display: flex;
+  flex-direction: column;
   position: relative;
-
-  img {
-    position: absolute;
-    top: 10px;
-    z-index: 1;
+  @include m-lg() {
+    justify-content: space-between;
+    flex-direction: row;
   }
+  &__item {
+    position: relative;
+    display: block;
+    margin-bottom: $gap;
+    width: 100%;
+    @include m-lg() {
+      margin-bottom: 0;
+    }
+    &___input {
+      width: 100%;
+      padding-left: $gap * 2;
 
-  &--left {
-    img {
-      left: 20px;
+      &[type="date"] {
+        appearance: none;
+        &::-webkit-inner-spin-button {
+          display: none;
+        }
+      }
+    }
+    &___icon {
+      position: absolute;
+      top: 50%;
+      left: $gap/2;
+      width: $gap;
+      height: $gap;
+      object-fit: contain;
+      transform: translateY(-50%);
+      &--right {
+        left: unset;
+        right: $gap/2;
+      }
+    }
+
+    &--people {
+      // margin-bottom: 0;
+      width: 150px;
+      flex-shrink: 0;
+      @include sm() {
+        width: 100%;
+      }
+      @include m-sm() {
+        margin-left: $gap;
+      }
+    }
+  }
+  &__group {
+    @include m-sm() {
+      display: flex;
+
+      &--cities {
+        width: 100%;
+        .section-inputs__item {
+          &:first-child {
+            .section-inputs__item___input {
+              border-right: 0 solid transparent;
+              border-top-right-radius: 0;
+              border-bottom-right-radius: 0;
+            }
+          }
+          &:last-child {
+            .section-inputs__item___input {
+              border-left: 0 solid transparent;
+              border-top-left-radius: 0;
+              border-bottom-left-radius: 0;
+            }
+          }
+        }
+      }
+      @include lg() {
+        margin-bottom: $gap;
+        .section-inputs__item {
+          margin-bottom: 0;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    @include m-lg() {
+      margin-right: $gap;
+
+      &--dates_n_ppl {
+        .section-inputs__item {
+          max-width: 190px;
+        }
+      }
     }
   }
 
-  &--right {
-    img {
-      right: 0;
+  &__btn {
+    @include m-sm() {
+      @include lg() {
+        width: 100%;
+        max-width: 50%;
+        align-self: center;
+      }
     }
-  }
-
-  .formcontrol {
-    padding-left: 50px;
   }
 }

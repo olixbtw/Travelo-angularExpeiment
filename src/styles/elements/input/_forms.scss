@@ -1,25 +1,10 @@
-@import 'vars';
+@import "vars";
 
 .formcontrol {
   height: 40px;
   border: 1px solid $color-grey;
-  margin-right: 10px;
   padding-right: 15px;
   padding-left: 20px;
   font-size: 14px;
-  width: 200px;
-
-  &--left {
-    border-right: none;
-    margin-right: 0;
-    padding-right: 25px;
-  }
-
-  &--right {
-    border-left: none;
-  }
-
-  &[type="number"] {
-    width: 160px;
-  }
+  border-radius: 5px;
 }
