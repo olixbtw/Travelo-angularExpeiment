@@ -3,80 +3,72 @@
     <label class="section-radios__item radio">
       <input class="section-inputs__item___input formcontrol" type="radio" formControlName="tripType" value="return" />
       <span>Return</span>
-          </label>
-          <label class="section-radios__item radio">
-            <input
-              class="section-inputs__item___input formcontrol"
-              type="radio"
-              formControlName="tripType"
-              value="oneWay"
-            />
-            <span>One way</span>
-          </label>
-          <label class="section-radios__item radio">
-            <input
-              class="section-inputs__item___input formcontrol"
-              type="radio"
-              formControlName="tripType"
-              value="multiTrip"
-            />
-            <span>Multi-trip</span>
-          </label>
-        </div>
-        <div class="section-inputs">
-          <div class="section-inputs__group section-inputs__group--cities">
-            <label class="section-inputs__item">
-              <img class="section-inputs__item___icon" src="assets/ui/plane_to.svg" alt="departure" />
-              <input
-                class="section-inputs__item___input formcontrol"
-                type="text"
-                placeholder="Kyiv (KBP)"
-                formControlName="departure"
-              />
-              <img
-                class="section-inputs__item___icon section-inputs__item___icon--right"
-                src="assets/ui/backnforce.svg"
-                alt=""
-              />
-              <app-airports-dropdown
-                *ngIf="searchForm.value.departure.length >= 3"
-                [airports]="departureAirports"
-              ></app-airports-dropdown>
-            </label>
-            <label class="section-inputs__item">
-              <img class="section-inputs__item___icon" src="assets/ui/plane_back.svg" alt="destination" />
-              <input
-                class="section-inputs__item___input formcontrol"
-                type="text"
-                placeholder="Paris (CDG)"
-                formControlName="destination"
-              />
-              <app-airports-dropdown
-                *ngIf="searchForm.value.destination.length >= 3"
-                [airports]="destinationAirports"
-              ></app-airports-dropdown>
-            </label>
-          </div>
-
-          <div class="section-inputs__group section-inputs__group--dates_n_ppl">
-            <label class="section-inputs__item">
-              <img class="section-inputs__item___icon" src="assets/ui/calendar.svg" alt="dates" />
-              <input class="section-inputs__item___input formcontrol" type="date" formControlName="dates" />
-            </label>
-            <label class="section-inputs__item section-inputs__item--people">
-              <img class="section-inputs__item___icon" src="assets/ui/profile.svg" alt="passengers" />
-              <input
-                class="section-inputs__item___input formcontrol"
-                type="number"
-                placeholder="1 passenger"
-                formControlName="passengers"
-              />
-            </label>
-          </div>
-
-          <button class="section-inputs__btn btn" (click)="onSubmit($event)">Search</button>
-        </div>
-      </form>
     </label>
+    <label class="section-radios__item radio">
+      <input class="section-inputs__item___input formcontrol" type="radio" formControlName="tripType" value="oneWay" />
+      <span>One way</span>
+    </label>
+    <label class="section-radios__item radio">
+      <input
+        class="section-inputs__item___input formcontrol"
+        type="radio"
+        formControlName="tripType"
+        value="multiTrip"
+      />
+      <span>Multi-trip</span>
+    </label>
+  </div>
+  <div class="section-inputs">
+    <div class="section-inputs__group section-inputs__group--cities">
+      <label class="section-inputs__item">
+        <img class="section-inputs__item___icon" src="assets/ui/plane_to.svg" alt="departure" />
+        <input
+          class="section-inputs__item___input formcontrol"
+          type="text"
+          placeholder="Kyiv (KBP)"
+          formControlName="departure"
+        />
+        <img
+          class="section-inputs__item___icon section-inputs__item___icon--right"
+          src="assets/ui/backnforce.svg"
+          alt=""
+        />
+        <app-airports-dropdown
+          *ngIf="searchForm.value.departure.length >= 3"
+          [airports]="departureAirports"
+        ></app-airports-dropdown>
+      </label>
+      <label class="section-inputs__item">
+        <img class="section-inputs__item___icon" src="assets/ui/plane_back.svg" alt="destination" />
+        <input
+          class="section-inputs__item___input formcontrol"
+          type="text"
+          placeholder="Paris (CDG)"
+          formControlName="destination"
+        />
+        <app-airports-dropdown
+          *ngIf="searchForm.value.destination.length >= 3"
+          [airports]="destinationAirports"
+        ></app-airports-dropdown>
+      </label>
+    </div>
+
+    <div class="section-inputs__group section-inputs__group--dates_n_ppl">
+      <label class="section-inputs__item">
+        <img class="section-inputs__item___icon" src="assets/ui/calendar.svg" alt="dates" />
+        <input class="section-inputs__item___input formcontrol" type="date" formControlName="dates" />
+      </label>
+      <label class="section-inputs__item section-inputs__item--people">
+        <img class="section-inputs__item___icon" src="assets/ui/profile.svg" alt="passengers" />
+        <input
+          class="section-inputs__item___input formcontrol"
+          type="number"
+          placeholder="1 passenger"
+          formControlName="passengers"
+        />
+      </label>
+    </div>
+
+    <button class="section-inputs__btn btn" (click)="onSubmit($event)">Search</button>
   </div>
 </form>
