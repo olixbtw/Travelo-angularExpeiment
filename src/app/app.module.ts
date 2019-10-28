@@ -10,6 +10,7 @@ import { FlightsService } from '@services/flights.service';
 import { FilterService } from '@services/filter.service';
 import { SortService } from '@services/sort.service';
 import { UsersService } from '@services/users.service';
+import { AirportsService } from '@services/airports.service';
 
 import { HomePageComponent } from '@routes/home-page/home-page.component';
 import { FlightsComponent } from '@routes/flights/flights.component';
@@ -34,6 +35,7 @@ import { FlightsSortComponent } from '@components/flights-sort/flights-sort.comp
 import { MyTripsItemComponent } from '@components/my-trips-item/my-trips-item.component';
 import { BookingTicketsComponent } from '@components/booking-tickets/booking-tickets.component';
 import { FlightsFilterComponent } from '@components/flights-filter/flights-filter.component';
+import { AirportsDropdownComponent } from '@components/flight-search-main/airports-dropdown/airports-dropdown.component';
 
 @NgModule({
   declarations: [
@@ -59,9 +61,10 @@ import { FlightsFilterComponent } from '@components/flights-filter/flights-filte
     BookingComponent,
     PaymentComponent,
     ResultsComponent,
+    AirportsDropdownComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
-  providers: [FlightsService, FilterService, SortService, UsersService],
+  providers: [FlightsService, FilterService, SortService, UsersService, AirportsService],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

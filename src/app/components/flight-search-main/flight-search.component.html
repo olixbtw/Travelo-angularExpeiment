@@ -1,4 +1,4 @@
-<form class="form" [formGroup]="searchForm">
+<form class="form" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
   <div class="form__inline">
     <label>
       <input type="radio" formControlName="tripType" value="return" />
@@ -16,7 +16,17 @@
   <div class="form__inline">
     <label class="form-icon form-icon--left">
       <img src="assets/ui/plane_to.svg" alt="departure" />
-      <input type="text" class="formcontrol formcontrol--left" placeholder="Kyiv (KBP)" formControlName="departure" />
+      <input
+        type="text"
+        class="formcontrol formcontrol--left"
+        (input)="onFlightInputChange($event)"
+        placeholder="Kyiv (KBP)"
+        formControlName="departure"
+      />
+      <app-airports-dropdown
+        *ngIf="searchForm.value.departure.length >= 3"
+        [airports]="departureAirports"
+      ></app-airports-dropdown>
     </label>
     <label class="form-icon form-icon--right">
       <img src="assets/ui/backnforce.svg" alt="" />
@@ -26,9 +36,14 @@
       <input
         type="text"
         class="formcontrol formcontrol--right"
+        (input)="onFlightInputChange($event)"
         placeholder="Paris (CDG)"
         formControlName="destination"
       />
+      <app-airports-dropdown
+        *ngIf="searchForm.value.destination.length >= 3"
+        [airports]="destinationAirports"
+      ></app-airports-dropdown>
     </label>
     <label class="form-icon form-icon--left">
       <img src="assets/ui/calendar.svg" alt="dates" />
@@ -42,6 +57,6 @@
       <img src="assets/ui/profile.svg" alt="passengers" />
       <input type="number" class="formcontrol" placeholder="1 passenger" formControlName="passengers" />
     </label>
-    <button class="btn" (click)="onSubmit($event)">Search</button>
+    <button class="btn">Search</button>
   </div>
 </form>
