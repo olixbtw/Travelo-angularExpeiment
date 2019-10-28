@@ -34,19 +34,21 @@
           <input type="text" formControlName="cardOwner" placeholder="John Smith" class="formcontrol" /><br />
         </label>
       </form>
-      <img src="assets/ui/information.svg" alt="departure" class="info-icon" />
-      <div class="card-image">
-        <div class="blue-line"></div>
-        <div class="card-image-text">
-          <div class="card-image-cvv">CVV</div>
-          <div class="card-image-stars">***</div>
+      <div class="card_template">
+        <img src="assets/ui/information.svg" alt="departure" class="info-icon" />
+        <div class="card-image">
+          <div class="blue-line"></div>
+          <div class="card-image-text">
+            <div class="card-image-cvv">CVV</div>
+            <div class="card-image-stars">***</div>
+          </div>
         </div>
       </div>
     </div>
     <div class="checkbox">
       <input type="checkbox" value="true" name="agreement" id="agreement">
       <label for="agreement" class="checkbox-text">
-        I agree with<a routerLink="err">Terms & Conditions</a>
+        I agree with <a routerLink="err">Terms & Conditions</a>
       </label>
     </div>
 
