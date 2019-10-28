@@ -27,6 +27,7 @@ export class FlightSearchComponent implements OnInit {
 
   onSubmit() {
     const currentUrlSegment: UrlSegment = this.route.snapshot.url[0] || new UrlSegment('/', {});
+    console.log(new Date(this.searchForm.value.dates));
     this.filterService.filterByDate(this.searchForm.value.dates);
     switch (currentUrlSegment.path) {
       case '/':

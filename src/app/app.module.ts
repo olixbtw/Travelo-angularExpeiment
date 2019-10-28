@@ -3,10 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { CalendarModule } from 'primeng/calendar';
 import { AppRoutingModule } from '@app/app-routing.module';
 import { AppComponent } from '@app/app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FlightsService } from '@services/flights.service';
 import { FilterService } from '@services/filter.service';
@@ -62,7 +60,7 @@ import { FlightsFilterComponent } from '@components/flights-filter/flights-filte
     PaymentComponent,
     ResultsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, CalendarModule, BrowserAnimationsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [FlightsService, FilterService, SortService, UsersService],
   bootstrap: [AppComponent],
 })

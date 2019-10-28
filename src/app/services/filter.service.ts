@@ -7,16 +7,16 @@ import { Injectable } from '@angular/core';
 export class FilterService {
   constructor(private flightsService: FlightsService) {}
 
-  filterByDate(departure: string, destination?: string) {
+  filterByDate(departure: Date, destination?: Date) {
     this.flightsService.filteredTrips = this.flightsService.trips
       .slice()
       .filter((flight) => flight.flights[0].date === FilterService.formatDate(departure));
   }
 
-  static formatDate(stringedDate: string) {
+  static formatDate(date: Date): string {
     const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
-    const date = new Date(stringedDate);
+    console.log(date.getDate());
     return `${days[date.getDay()]}, ${months[date.getMonth()]} ${date.getDate()}`;
   }
 }
