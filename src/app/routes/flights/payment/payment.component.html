@@ -1,1 +1,62 @@
-<app-flight-payment></app-flight-payment>
+<div class="container">
+  <h2>Ticket details & Booking</h2>
+  <br>
+  <br>
+  <br>
+</div>
+
+<div class="container container--sm">
+  <app-booking-tickets></app-booking-tickets>
+
+  <section class="payment-section">
+    <div class="payment-container">
+      <h2>Payment</h2>
+      <div>here will be two tickets</div>
+    </div>
+
+    <div class="billing-container">
+      <h2>Billing information</h2>
+      <div class="card-container">
+        <form action="#" method="post" [formGroup]="cardForm" id="cardForm">
+
+          <label> Card Number <br />
+            <input type="number" formControlName="cardNumber" placeholder="0000 0000 0000 0000"
+              class="formcontrol" /><br />
+          </label>
+
+          <div class="endDate-cv2-container">
+            <label>
+              End Date <br />
+              <input type="text" formControlName="endDate" placeholder="__/__" class="formcontrol endDate" /><br />
+            </label>
+            <label>
+              CV2 <br />
+              <input type="text" formControlName="cv2" placeholder="555" class="formcontrol cv2" /><br />
+            </label>
+          </div>
+
+          <label>
+            Card Owner <br />
+            <input type="text" formControlName="cardOwner" placeholder="John Smith" class="formcontrol" /><br />
+          </label>
+        </form>
+        <img src="assets/ui/information.svg" alt="departure" class="info-icon" />
+        <div class="card-image">
+          <div class="blue-line"></div>
+          <div class="card-image-text">
+            <div class="card-image-cvv">CVV</div>
+            <div class="card-image-stars">***</div>
+          </div>
+        </div>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" value="true" name="agreement" id="agreement">
+        <label for="agreement" class="checkbox-text">
+          I agree with<a routerLink="err">Terms & Conditions</a>
+        </label>
+      </div>
+
+      <button class="btn" (click)="submitPayment()">Pay</button>
+    </div>
+  </section>
+</div>
