@@ -17,9 +17,13 @@ export class FlightSearchComponent implements OnInit {
     passengers: new FormControl(),
   });
 
-  constructor(private route: ActivatedRoute, private router: Router, private filterService: FilterService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private filterService: FilterService
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   onSubmit() {
     const currentUrlSegment: UrlSegment = this.route.snapshot.url[0] || new UrlSegment('/', {});

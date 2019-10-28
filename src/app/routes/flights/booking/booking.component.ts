@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-
+import { Router, ActivatedRoute } from '@angular/router';
 @Component({
-  selector: 'app-form-user-info',
-  templateUrl: './form-user-info.component.html',
-  styleUrls: ['./form-user-info.component.scss'],
+  selector: 'app-booking',
+  templateUrl: './booking.component.html',
+  styleUrls: ['./booking.component.scss']
 })
-export class FormUserInfoComponent implements OnInit {
+export class BookingComponent implements OnInit {
   bookingForm = new FormGroup({
     firstName: new FormControl(),
     lastName: new FormControl(),
@@ -17,7 +17,15 @@ export class FormUserInfoComponent implements OnInit {
     expirydate: new FormControl(),
     luggage: new FormControl(),
   });
-  constructor() {}
 
-  ngOnInit() {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+  ) { }
+
+  submitUserInfo() {
+    this.router.navigate(['./payment'], { relativeTo: this.route });
+  }
+
+  ngOnInit() { }
 }
