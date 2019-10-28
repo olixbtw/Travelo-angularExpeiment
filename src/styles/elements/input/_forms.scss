@@ -1,0 +1,10 @@
+@import "vars";
+
+.formcontrol {
+  height: 40px;
+  border: 1px solid $color-grey;
+  padding-right: 15px;
+  padding-left: 20px;
+  font-size: 14px;
+  border-radius: 4px;
+}
