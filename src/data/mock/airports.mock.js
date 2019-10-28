@@ -1,0 +1,98 @@
+module.exports = [
+  {
+    country_code: 'FR',
+    city_code: 'PAR',
+    code: 'XEX',
+    name: 'Aerogare',
+  },
+  {
+    country_code: 'FR',
+    city_code: 'PAR',
+    code: 'XDT',
+    name: 'Charles-de-Gaulle',
+  },
+  {
+    country_code: 'FR',
+    city_code: 'PAR',
+    code: 'ETT',
+    name: 'Etoile',
+  },
+  {
+    country_code: 'FR',
+    city_code: 'PAR',
+    code: 'XPG',
+    name: 'Gare du Nord Rail Stn',
+  },
+  {
+    country_code: 'FR',
+    city_code: 'PAR',
+    code: 'XGB',
+    name: 'Gare Montparnasse',
+  },
+  {
+    country_code: 'FR',
+    city_code: 'PAR',
+    code: 'JDP',
+    name: 'Heliport De Paris',
+  },
+  {
+    country_code: 'FR',
+    city_code: 'PAR',
+    code: 'JPU',
+    name: 'La Defense Heliport',
+  },
+  {
+    country_code: 'FR',
+    city_code: 'PAR',
+    code: 'LBG',
+    name: 'Le Bourget',
+  },
+  {
+    country_code: 'FR',
+    city_code: 'PAR',
+    code: 'ORY',
+    name: 'Orly',
+  },
+  {
+    country_code: 'FR',
+    city_code: 'PAR',
+    code: 'CDG',
+    name: 'Roissy Ch. de Gaulle',
+  },
+  {
+    country_code: 'FR',
+    city_code: 'PAR',
+    code: 'VIY',
+    name: 'Villa Coublay',
+  },
+  {
+    country_code: 'FR',
+    city_code: 'PAR',
+    code: 'PAR',
+    name: 'Metropolian Area',
+  },
+  {
+    country_code: 'UA',
+    city_code: 'IEV',
+    code: 'KBP',
+    name: 'Borispil Airport',
+  },
+  {
+    country_code: 'UA',
+    city_code: 'IEV',
+    code: 'IEV',
+    name: 'Zhulyany',
+  },
+  {
+    country_code: 'GR',
+    city_code: 'ATH',
+    code: 'ATH',
+    name: 'Eleftherios Venizelos/Athens Intl Airport',
+  },
+  {
+    country_code: 'PL',
+    city_code: 'WAW',
+    code: 'WAW',
+    name: 'Frederic Chopin',
+  },
+];
